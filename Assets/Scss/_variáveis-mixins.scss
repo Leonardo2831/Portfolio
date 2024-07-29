@@ -1,0 +1,24 @@
+// colors
+
+// fonts
+
+// spaces
+
+// functions
+
+// mixins
+@mixin fontText{
+    font: {
+        size: 16px;
+        family: roboto;
+        line-height: 1;
+    }
+}
+
+@mixin fontTitle{
+    font: {
+        size: 32px;
+        family: roboto;
+        line-height: 1.125;
+    }
+}
