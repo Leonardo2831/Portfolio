@@ -59,3 +59,19 @@ body{
 img{
 	width: 100%;
 }
+
+p{
+	max-width: 45ch;
+
+	@include responsive(mobile){
+		max-width: 55ch;
+	}
+
+	@include responsive(tablet){
+		max-width: 65ch;
+	}
+
+	@include responsive(screen){
+		max-width: 70ch;
+	}
+}
