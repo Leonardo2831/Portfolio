@@ -2,23 +2,45 @@
 
 // fonts
 
+$primary-font: 'Roboto', sans-serif;
+$secundary-font: 'Source Code Pro', monospace;
+
 // spaces
 
 // functions
-
-// mixins
-@mixin fontText{
-    font: {
-        size: 16px;
-        family: roboto;
-        line-height: 1;
-    }
+@function rem($px, $contexto: 16px){
+    @return ($px / $contexto)*1rem;
 }
 
-@mixin fontTitle{
+// mixins
+@mixin fontText($fontSize, $fontWeight, $lineHeight){
     font: {
-        size: 32px;
-        family: roboto;
-        line-height: 1.125;
+        family: $primary-font;
+        size: rem($fontSize);
+        weight: $fontWeight;
+    }
+
+    line-height: $lineHeight;
+}
+
+@mixin fontTitle($fontSize, $fontWeight, $lineHeight){
+    font: {
+        family: $secundary-font;
+        size: rem($fontSize);
+        weight: $fontWeight;
+    }
+
+    line-height: $lineHeight;
+}
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == tablet {
+        @media(min-width:768px){
+            @content;
+        }
+    } @if else $breakpoint == screen {
+        @media(min-width:1024px){
+            @content
+        }
     }
 }
