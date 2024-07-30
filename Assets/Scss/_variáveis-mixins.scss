@@ -84,11 +84,11 @@ $padding-t: 60px;
             @content;
         }
     }
-    @if else $breakpoint == tablet {
+    @else if $breakpoint == tablet {
         @media(min-width:768px){
             @content;
         }
-    } @if else $breakpoint == screen {
+    } @else if $breakpoint == screen {
         @media(min-width:1024px){
             @content;
         }
