@@ -272,6 +272,7 @@
   font-weight: 500;
   line-height: 40px;
   color: #CCC5C4;
+  margin: 0 0 30px 0;
 }
 @media (min-width: 768px) {
   .main__about-me h1 {
@@ -314,7 +315,7 @@
   font-weight: 400;
   line-height: 20.8px;
   color: #B8B1B0;
-  margin: 30px 0 0 19px;
+  margin: 0 0 0 19px;
 }
 @media (min-width: 768px) {
   .main__about-me p {
@@ -332,6 +333,97 @@
     font-weight: 400;
     line-height: 31.2px;
   }
+}
+
+.main__skills h1 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 40px;
+  color: #CCC5C4;
+  margin: 0 0 30px 0;
+}
+@media (min-width: 768px) {
+  .main__skills h1 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__skills h1 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 3.25rem;
+    font-weight: 500;
+    line-height: 65px;
+  }
+}
+.main__skills h1::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  margin: 0 15px 0 0;
+  background-color: #AE2122;
+}
+@media (min-width: 768px) {
+  .main__skills h1::before {
+    width: 5px;
+    height: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__skills h1::before {
+    height: 22px;
+  }
+}
+
+.skills__graphics {
+  display: grid;
+  gap: 20px;
+}
+.skills__graphics div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.skills__graphics div figure {
+  width: 40px;
+}
+.skills__graphics div .graphics {
+  width: 100%;
+  background-color: #3D3736;
+  border-radius: 20px;
+}
+.skills__graphics div .graphics div {
+  padding: 5px 15px;
+}
+.skills__graphics div:nth-of-type(1) .graphics div {
+  background-image: linear-gradient(#CC6699, #AD3D82);
+  width: 30%;
+  border-radius: 20px;
+}
+.skills__graphics div:nth-of-type(2) .graphics div {
+  background-image: linear-gradient(#33A9DC, #1572B6);
+  width: 40%;
+  border-radius: 20px;
+}
+.skills__graphics div:nth-of-type(3) .graphics div {
+  background-image: linear-gradient(#F16529, #DE4B25);
+  width: 90%;
+  border-radius: 20px;
+}
+.skills__graphics div:nth-of-type(4) .graphics div {
+  background-image: linear-gradient(#F4D016, #C7911F);
+  width: 60%;
+  border-radius: 20px;
+}
+.skills__graphics div:nth-of-type(5) .graphics div {
+  background-image: linear-gradient(#0AD084, #149959);
+  width: 70%;
+  border-radius: 20px;
 }
 
 * {

@@ -1,0 +1,90 @@
+.main__skills{
+    
+    h1{
+        @include fontTitle(32, 500);
+        color: $grey-3;
+
+        margin: 0 0 $margin-1 0;
+
+        @include responsive(tablet){
+            @include fontTitle(48, 500);
+        }
+
+        @include responsive(screen){
+            @include fontTitle(52, 500);
+        }
+
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 14px;
+            margin: 0 15px 0 0;
+
+            background-color: $red-4;
+
+            @include responsive(tablet){
+                width: 5px;
+                height: 20px;
+            }
+
+            @include responsive(screen){
+                height: 22px;
+            }
+        }
+    }
+}
+
+.skills__graphics{
+    display: grid;
+    gap: $gap-1;
+
+    div{
+        @include flex(center, flex-start);
+        gap: $gap-1;
+
+        figure{
+            width: 40px;
+        }
+
+        .graphics{
+            width: 100%;
+            background-color: $grey-5;
+            border-radius: 20px;
+
+            div{
+                padding: 5px 15px;
+            }
+        }
+    }
+
+    div:nth-of-type(1) .graphics div{
+        background-image: $gradient-sass;
+        width: 30%;
+        border-radius: 20px;
+    }
+
+    div:nth-of-type(2) .graphics div{
+        background-image: $gradient-css;
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    div:nth-of-type(3) .graphics div{
+        background-image: $gradient-html;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    div:nth-of-type(4) .graphics div{
+        background-image: $gradient-javascript;
+        width: 60%;
+        border-radius: 20px;
+    }
+
+    div:nth-of-type(5) .graphics div{
+        background-image: $gradient-figma;
+        width: 70%;
+        border-radius: 20px;
+    }
+}
