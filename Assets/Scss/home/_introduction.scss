@@ -30,7 +30,7 @@
             color: $red-1;
             
             @include responsive(mobile){
-                @include fontTitle(28, 600);
+                @include fontTitle(24, 600);
             }
 
             @include responsive(tablet){
@@ -49,7 +49,7 @@
             white-space: nowrap;
 
             @include responsive(mobile){
-                @include fontTitle(28, 300);
+                @include fontTitle(24, 300);
             }
 
             @include responsive(tablet){
