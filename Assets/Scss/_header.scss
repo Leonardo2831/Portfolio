@@ -42,7 +42,7 @@
 
     transition: right 0.3s ease-in-out;
 
-    @include responsive(tablet){
+    @include responsive(screen){
         @include flex(center, space-between);
         gap: $gap-t;
         padding: 0;
@@ -102,6 +102,10 @@
     @include flex(center, center);
     flex-direction: column;
     gap: $gap-m / 4;
+    
+    @include responsive(screen){
+        display: none;
+    }
 
     div{
         background-color: $grey-3;
@@ -109,9 +113,5 @@
         width: 30px;
         height: 3px;
         border-radius: 1px;
-    }
-
-    @include responsive(tablet){
-        display: none;
     }
 }
