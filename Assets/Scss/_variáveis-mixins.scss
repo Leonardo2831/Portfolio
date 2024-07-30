@@ -1,15 +1,14 @@
 // colors
 
 // fonts
-
 $primary-font: 'Roboto', sans-serif;
 $secundary-font: 'Source Code Pro', monospace;
 
 // spaces
 
 // functions
-@function rem($px, $contexto: 16px){
-    @return ($px / $contexto)*1rem;
+@function rem($pixels, $contexto: 16){
+    @return ($pixels / $contexto) * 1rem;
 }
 
 // mixins
