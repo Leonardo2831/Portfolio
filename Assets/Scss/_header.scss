@@ -1,0 +1,117 @@
+@import 'variáveis-mixins';
+
+.header{
+    @include flex(center, space-between);
+    padding: $padding-m / 2;
+    gap: $gap-m;
+    
+    position: relative;
+
+    @include responsive(tablet){
+        padding: $padding-m;
+    }
+
+    h1{
+        @include fontTitle(16, 500);
+        color: $red-2;
+
+        @include responsive(tablet){
+            @include fontTitle(24, 500)
+        }
+
+        @include responsive(screen){
+            @include fontTitle(32, 500)
+        }
+    }
+}
+
+.header__links{
+    display: grid;
+    
+    gap: $gap-m + 10;
+    padding: $padding-m;
+
+    border-top: 2px solid $grey-6;
+    border-left: 2px solid $grey-6;
+    border-bottom: 2px solid $grey-6;
+    background-color: $grey-7;
+
+    position: absolute;
+    top: 100%;
+    right: -100%;
+
+    transition: right 0.3s ease-in-out;
+
+    @include responsive(tablet){
+        @include flex(center, space-between);
+        gap: $gap-t;
+        padding: 0;
+
+        border: 0;
+        position: static;
+        right: auto;
+        top: auto;
+    }
+
+    &.active{
+        right: 0
+    }
+
+    li{
+        @include flex(center, center);
+        flex-direction: column;
+
+        a{
+            @include fontTitle(16, 500);
+            color: $grey-3;
+
+            @include responsive(tablet){
+                @include fontTitle(20, 500);
+            }
+
+            @include responsive(screen){
+                @include fontTitle(24, 500)
+            }
+        }
+
+        &:first-child{
+            margin: 6px 0 0 0;
+
+            a::after{
+                content: '';
+                display: block;
+    
+                margin: 4px 0 0 0;
+                width: 79px;
+                height: 2px;
+                background-color: $red-4;
+    
+                @include responsive(tablet){
+                    width: 98px;
+                }
+
+                @include responsive(screen){
+                    width: 118px;
+                }
+            }
+        }
+    }
+}
+
+.header__menu{
+    @include flex(center, center);
+    flex-direction: column;
+    gap: $gap-m / 4;
+
+    div{
+        background-color: $grey-3;
+
+        width: 30px;
+        height: 3px;
+        border-radius: 1px;
+    }
+
+    @include responsive(tablet){
+        display: none;
+    }
+}
