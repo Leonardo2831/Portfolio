@@ -1,0 +1,79 @@
+.main__introduction{
+    @include flex(center, space-between);
+    flex-wrap: wrap;
+    gap: $gap-m;
+
+    @include responsive(mobile){
+        flex-wrap: nowrap;
+    }
+
+    h1{
+        @include fontTitle(22, 500);
+        color: $grey-3;
+        white-space: pre-line;
+
+        @include responsive(mobile){
+            @include fontTitle(24, 600);
+        }
+
+        @include responsive(tablet){
+            min-width: 23ch;
+            @include fontTitle(28, 600);
+        }
+
+        @include responsive(screen){
+            @include fontTitle(32, 600);
+        }
+
+        b{
+            @include fontTitle(22, 600);
+            color: $red-1;
+            
+            @include responsive(mobile){
+                @include fontTitle(28, 600);
+            }
+
+            @include responsive(tablet){
+                @include fontTitle(28, 600);
+            }
+
+            @include responsive(screen){
+                @include fontTitle(32, 600);
+            }
+        }
+
+        i{
+            @include fontTitle(22, 300);
+            font-style: italic;
+
+            white-space: nowrap;
+
+            @include responsive(mobile){
+                @include fontTitle(28, 300);
+            }
+
+            @include responsive(tablet){
+                @include fontTitle(28, 300);
+            }
+
+            @include responsive(screen){
+                @include fontTitle(32, 300);
+            }
+        }
+    }
+
+    figure{
+        @include flex(center, center);
+
+        img{
+            border: 3px solid $grey-6;
+
+            max-width: 400px;
+            max-height: 400px;
+            min-width: 200px;
+            min-height: 200px;
+
+            border-radius: 51% 49% 67% 33% / 64% 45% 55% 36%;
+        }
+    }
+}
