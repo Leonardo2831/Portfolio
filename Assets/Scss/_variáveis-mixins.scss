@@ -23,12 +23,20 @@ $secundary-font: 'Source Code Pro', monospace;
 $radius: 5px;
 
 // valores mobile
-$padding-m: 40px;
-$gap-m: 20px;
+$max-ch-1: 45ch;
+$padding-1: 40px;
+$margin-1: 30px;
+$gap-1: 20px;
 
-// tablet and screen
-$gap-t: 30px;
-$padding-t: 60px;
+// tablet
+$max-ch-2: 55ch;
+$gap-2: 30px;
+$padding-2: 60px;
+$margin-2: 40px;
+
+// screen
+$max-ch-3: 65ch;
+$padding-3: 80px;
 
 // functions
 // trasformar px em rem

@@ -1,14 +1,12 @@
-@import 'variáveis-mixins';
-
 .header{
     @include flex(center, space-between);
-    padding: $padding-m / 2;
-    gap: $gap-m;
+    padding: $padding-1 / 2;
+    gap: $gap-1;
     
     position: relative;
 
     @include responsive(tablet){
-        padding: $padding-m;
+        padding: $padding-1;
     }
 
     h1{
@@ -28,8 +26,8 @@
 .header__links{
     display: grid;
     
-    gap: $gap-m + 10;
-    padding: $padding-m;
+    gap: $gap-1 + 10;
+    padding: $padding-1;
 
     border-top: 2px solid $grey-6;
     border-left: 2px solid $grey-6;
@@ -44,7 +42,7 @@
 
     @include responsive(screen){
         @include flex(center, space-between);
-        gap: $gap-t;
+        gap: $gap-2;
         padding: 0;
 
         border: 0;
@@ -101,7 +99,7 @@
 .header__menu{
     @include flex(center, center);
     flex-direction: column;
-    gap: $gap-m / 4;
+    gap: $gap-1 / 4;
     
     @include responsive(screen){
         display: none;

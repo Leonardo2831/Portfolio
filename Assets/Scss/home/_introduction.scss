@@ -1,7 +1,7 @@
 .main__introduction{
     @include flex(center, space-between);
     flex-wrap: wrap;
-    gap: $gap-m;
+    gap: $gap-1;
 
     @include responsive(mobile){
         flex-wrap: nowrap;
