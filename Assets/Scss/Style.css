@@ -399,30 +399,35 @@
 }
 .skills__graphics div .graphics div {
   padding: 5px 15px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.skills__graphics div .graphics div p {
+  white-space: nowrap;
 }
 .skills__graphics div:nth-of-type(1) .graphics div {
   background-image: linear-gradient(#CC6699, #AD3D82);
-  width: 30%;
+  width: 63%;
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(2) .graphics div {
   background-image: linear-gradient(#33A9DC, #1572B6);
-  width: 40%;
+  width: 91%;
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(3) .graphics div {
   background-image: linear-gradient(#F16529, #DE4B25);
-  width: 90%;
+  width: 100%;
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(4) .graphics div {
   background-image: linear-gradient(#F4D016, #C7911F);
-  width: 60%;
+  width: 9%;
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(5) .graphics div {
   background-image: linear-gradient(#0AD084, #149959);
-  width: 70%;
+  width: 27%;
   border-radius: 20px;
 }
 

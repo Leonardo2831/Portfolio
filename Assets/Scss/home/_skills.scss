@@ -54,37 +54,42 @@
 
             div{
                 padding: 5px 15px;
+                min-width: fit-content;
+
+                p{
+                    white-space: nowrap;
+                }
             }
         }
     }
 
     div:nth-of-type(1) .graphics div{
         background-image: $gradient-sass;
-        width: 30%;
+        width: 63%;
         border-radius: 20px;
     }
 
     div:nth-of-type(2) .graphics div{
         background-image: $gradient-css;
-        width: 40%;
+        width: 91%;
         border-radius: 20px;
     }
 
     div:nth-of-type(3) .graphics div{
         background-image: $gradient-html;
-        width: 90%;
+        width: 100%;
         border-radius: 20px;
     }
 
     div:nth-of-type(4) .graphics div{
         background-image: $gradient-javascript;
-        width: 60%;
+        width: 9%;
         border-radius: 20px;
     }
 
     div:nth-of-type(5) .graphics div{
         background-image: $gradient-figma;
-        width: 70%;
+        width: 27%;
         border-radius: 20px;
     }
 }
