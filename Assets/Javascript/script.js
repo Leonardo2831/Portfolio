@@ -22,8 +22,8 @@ const fixedMonth = 7;
 
 function checkMonth(){
     const nowDate = new Date();
-    const nowMonth = (nowDate.getMonth() + 6);
-    // dezembro = 12
+    const nowMonth = (nowDate.getMonth() + 1);
+    // fevereiro = 14
 
     if(Math.abs(fixedMonth - nowMonth) === 1){
         graphics1.innerHTML = `${Number(graphics1.innerHTML) + 1} mês`;
@@ -35,7 +35,8 @@ function checkMonth(){
         graphics1.innerHTML = `1 ano`;
         
     } else {
-        graphics1.innerHTML = `${} ano e ${Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth)} meses`;
+        graphics1.innerHTML = `${Math.floor(nowMonth / 12)} anos
+        e ${Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) - 12} meses`;
     }
 
 };
