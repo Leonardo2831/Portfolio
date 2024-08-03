@@ -39,9 +39,14 @@
     display: grid;
     gap: $gap-1;
 
-    div{
+    > div{
         @include flex(center, flex-start);
         gap: $gap-1;
+        
+        div{
+            display: flex;
+            gap: 5px;
+        }
 
         figure{
             width: 40px;
@@ -56,8 +61,18 @@
                 padding: 5px 15px;
                 min-width: fit-content;
 
-                p{
+                p, span{
                     white-space: nowrap;
+                    @include fontTitle(14, 400);
+                    color: $grey-7;
+
+                    @include responsive(tablet){
+                        @include fontTitle(20, 400);
+                    }
+
+                    @include responsive(screen){
+                        @include fontTitle(22, 400);
+                    }
                 }
             }
         }
