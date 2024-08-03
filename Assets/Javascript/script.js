@@ -13,35 +13,43 @@ const graphics3 = document.querySelector('.skills__graphics div:nth-of-type(3) >
 const graphics4 = document.querySelector('.skills__graphics div:nth-of-type(4) > p');
 const graphics5 = document.querySelector('.skills__graphics div:nth-of-type(5) > p');
 
-const fixedMonth = 7;
-// julho
-
-// window.onload = function(){
-//     checkMonth();
-// }; 
+const fixedMonth = 8;
+// julho 
 
 function checkMonth(){
     const nowDate = new Date();
     const nowMonth = (nowDate.getMonth() + 1);
-    // fevereiro = 14
+    // 1
 
-    if(Math.abs(fixedMonth - nowMonth) === 1){
-        graphics1.innerHTML = `${Number(graphics1.innerHTML) + 1} mês`;
-
-    } else if(Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) < 12) {
-        graphics1.innerHTML = `${Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth)} meses`;
-
-    } else if(Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) === 12){
-        graphics1.innerHTML = `1 ano`;
-        
-    } else {
-        graphics1.innerHTML = `${Math.floor(nowMonth / 12)} anos
-        e ${Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) - 12} meses`;
+    if(1 < nowMonth < 8){
+        graphics1.innerHTML = `${Number(graphics1.innerHTML) + } mês`;
     }
-
 };
 
 checkMonth();
+
+// window.onload = function(){
+//     checkMonth();
+// };
+
+
+    // if(Math.abs(fixedMonth - nowMonth) === 1){
+    //     graphics1.innerHTML = `${Math.abs(fixedMonth - nowMonth)} mês`;
+
+    // } else if(Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) < 12) {
+    //     graphics1.innerHTML = `${Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth)} meses`;
+
+    // } else if((nowMonth + fixedMonth) % 12 === 0 && (nowMonth + fixedMonth) / 12 === 1){
+    //     graphics1.innerHTML = `1 ano`;
+        
+    // } else if(nowMonth % 12 === 0 && nowMonth / 12 > 1){
+    //     graphics1.innerHTML = `${Math.floor(nowMonth / 12)} anos`;
+        
+    // } else if(Number(graphics1.innerHTML) + Math.abs(fixedMonth - nowMonth) > 12){
+    //     graphics1.innerHTML = `${Math.floor(nowMonth / 12)} anos e ${nowMonth % 12} meses`;
+    // } else {
+    //     graphics1.innerHTML = 'erro';
+    // }
 
     // if(Math.abs(fixedYear - nowYear) === 1 && ){
 
