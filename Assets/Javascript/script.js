@@ -4,7 +4,7 @@ const menu = document.querySelector('.header__menu');
 
 menu.addEventListener('click', ()=>{
     headerLinks.classList.toggle('active');
-});
+})
 
 // atualização gráfico
 const graphicsBackground1 = document.querySelector('.skills__graphics div:nth-of-type(1) .graphics div');
@@ -37,9 +37,7 @@ const fixedYear = 2024;
 function checkMonth(){
     const nowDate = new Date();
     const nowYear = nowDate.getFullYear();
-    // 2025
     const nowMonth = nowDate.getMonth() + 1;
-    // 1
     const nowDay = nowDate.getDate() + 27;
     const variationMonths = Math.abs(nowMonth - fixedMonth);
     const variationYears = Math.abs(nowYear - fixedYear);
@@ -55,7 +53,7 @@ function checkMonth(){
                 graphics3.innerHTML = `${variationMonths + Number(graphics3.innerHTML)}`;
                 graphics4.innerHTML = `${variationMonths + Number(graphics4.innerHTML)}`;
                 graphics5.innerHTML = `${variationMonths + Number(graphics5.innerHTML)}`;
-            };
+            }
         }
 
         // para os próximos anos
@@ -67,7 +65,7 @@ function checkMonth(){
                 graphics3.innerHTML = `${16 + nowMonth + (12 * (variationYears - 1))}`;
                 graphics4.innerHTML = `${5 + nowMonth + (12 * (variationYears - 1))}`;
                 graphics5.innerHTML = `${7 + nowMonth + (12 * (variationYears - 1))}`;
-            };
+            }
         }
     }
 
@@ -110,7 +108,7 @@ function checkMonth(){
         nameMes5.style = 'display: none;';
         nameMeses5.style = 'display: block;';
     }
-};
+}
 
 checkMonth();
 
