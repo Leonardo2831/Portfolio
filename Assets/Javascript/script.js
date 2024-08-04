@@ -36,7 +36,7 @@ const fixedYear = 2024;
 
 function checkMonth(){
     const nowDate = new Date();
-    const nowYear = nowDate.getFullYear();
+    const nowYear = nowDate.getFullYear() + 1;
     const nowMonth = nowDate.getMonth() + 1;
     const nowDay = nowDate.getDate() + 27;
     const variationMonths = Math.abs(nowMonth - fixedMonth);
@@ -59,12 +59,12 @@ function checkMonth(){
         // para os próximos anos
         if(nowYear > 2024){
             for(let i = 0; i < 1; i++){
-                // o calculo para os meses foram pego o valor do final do ano passado (2024), adicionado mês atual, e somado a variação e anos - 1 vezes 12 para dar o valor dos meses para infinitos anos.
-                graphics1.innerHTML = `${11 + nowMonth + (12 * (variationYears - 1))}`;
-                graphics2.innerHTML = `${15 + nowMonth + (12 * (variationYears - 1))}`;
-                graphics3.innerHTML = `${16 + nowMonth + (12 * (variationYears - 1))}`;
-                graphics4.innerHTML = `${5 + nowMonth + (12 * (variationYears - 1))}`;
-                graphics5.innerHTML = `${7 + nowMonth + (12 * (variationYears - 1))}`;
+                // o calculo para os meses foi pego o valor incial + 4, no qual seria mesma coisa que pegar mes dezembro menos o numero inicial, adicionado mês atual, e somado a variação e anos - 1 vezes 12 para dar o valor dos meses para infinitos anos.
+                graphics1.innerHTML = `${Number(graphics1.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
+                graphics2.innerHTML = `${Number(graphics2.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
+                graphics3.innerHTML = `${Number(graphics3.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
+                graphics4.innerHTML = `${Number(graphics4.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
+                graphics5.innerHTML = `${Number(graphics5.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
             }
         }
     }
