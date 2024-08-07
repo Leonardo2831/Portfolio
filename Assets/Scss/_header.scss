@@ -20,6 +20,10 @@
         @include responsive(screen){
             @include fontTitle(32, 500)
         }
+
+        &::before{
+            content: none;
+        }
     }
 }
 

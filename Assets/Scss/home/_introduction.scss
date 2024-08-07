@@ -25,6 +25,10 @@
             @include fontTitle(32, 600);
         }
 
+        &::before{
+            content: none;
+        }
+
         b{
             @include fontTitle(22, 600);
             color: $red-1;
