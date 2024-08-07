@@ -315,6 +315,11 @@
 .skills__graphics > div figure {
   width: 40px;
 }
+@media (min-width: 1024px) {
+  .skills__graphics > div figure {
+    width: 45px;
+  }
+}
 .skills__graphics > div .graphics {
   width: 100%;
   background-color: #3D3736;
@@ -324,6 +329,17 @@
   padding: 5px 15px;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  height: 25px;
+}
+@media (min-width: 768px) {
+  .skills__graphics > div .graphics div {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .skills__graphics > div .graphics div {
+    height: 35px;
+  }
 }
 .skills__graphics > div .graphics div p, .skills__graphics > div .graphics div span {
   white-space: nowrap;

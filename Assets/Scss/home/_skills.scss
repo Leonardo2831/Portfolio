@@ -13,6 +13,10 @@
 
         figure{
             width: 40px;
+
+            @include responsive(screen){
+                width: 45px;
+            }
         }
 
         .graphics{
@@ -23,6 +27,15 @@
             div{
                 padding: 5px 15px;
                 min-width: fit-content;
+                height: 25px;
+
+                @include responsive(tablet){
+                    height: 30px;
+                }
+
+                @include responsive(screen){
+                    height: 35px;
+                }
 
                 p, span{
                     white-space: nowrap;
