@@ -5,40 +5,6 @@
         padding: $padding-3 0;
     }
 
-    h1{
-        @include fontTitle(32, 500);
-        color: $grey-3;
-
-        margin: 0 0 $margin-1 0;
-
-        @include responsive(tablet){
-            @include fontTitle(48, 500);
-        }
-
-        @include responsive(screen){
-            @include fontTitle(52, 500);
-        }
-
-        &::before{
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 14px;
-            margin: 0 15px 0 0;
-
-            background-color: $red-4;
-
-            @include responsive(tablet){
-                width: 5px;
-                height: 20px;
-            }
-
-            @include responsive(screen){
-                height: 22px;
-            }
-        }
-    }
-
     p{
         @include fontText(16, 400);
         color: $grey-4;
