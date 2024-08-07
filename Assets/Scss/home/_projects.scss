@@ -4,20 +4,53 @@
     @include responsive(screen){
         padding: $padding-3 0 0 0;
     }
+
+    h3{
+        @include fontText(16, 400);
+        color: $grey-3;
+    
+        @include responsive(tablet){
+            @include fontText(20, 400);
+        }
+    
+        @include responsive(screen){
+            @include fontText(24, 400);
+        }
+    
+        span{
+            @include fontText(16, 400);
+    
+            @include responsive(tablet){
+                @include fontText(20, 400);
+            }
+        
+            @include responsive(screen){
+                @include fontText(24, 400);
+            }
+        }
+    }
+
+    p{
+        color: $grey-3;
+    }
 }
 
 #javascript{
-
+    color: $javascript;
 }
 
 #css3{
-
+    color: $css3;
 }
 
 #html5{
-
+    color: $html5;
 }
 
 #figma{
-    
+    color: $figma;
+}
+
+#sass{
+    color: $sass;
 }
