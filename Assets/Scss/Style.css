@@ -399,12 +399,37 @@
     padding: 80px 0 0 0;
   }
 }
+.projects h2 {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 30px;
+  color: #CCC5C4;
+  margin: 0 0 10px 0;
+}
+@media (min-width: 768px) {
+  .projects h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 60px;
+  }
+}
 .projects h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 20.8px;
   color: #CCC5C4;
+  margin: 0 0 20px 0;
 }
 @media (min-width: 768px) {
   .projects h3 {
@@ -445,7 +470,78 @@
   }
 }
 .projects p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20.8px;
   color: #CCC5C4;
+  margin: 0 0 20px 0;
+}
+@media (min-width: 768px) {
+  .projects p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 31.2px;
+  }
+}
+.projects a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #FA8C84;
+  color: #420607;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .projects a {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 31.2px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects a {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 41.6px;
+  }
+}
+.projects a img {
+  width: 30px;
+}
+@media (min-width: 768px) {
+  .projects a img {
+    width: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects a img {
+    width: 40px;
+  }
+}
+.projects figure {
+  max-width: 700px;
+  max-height: 330px;
 }
 
 #javascript {
