@@ -5,100 +5,150 @@
         padding: $padding-3 0 0 0;
     }
 
-    h2{
-        @include fontTitle(24, 500);
-        color: $grey-3;
+    h1{
+        margin: 0 0 $margin-1 0;
 
-        margin: 0 0 10px 0;
-     
         @include responsive(tablet){
-            @include fontTitle(32, 500);
-        }
-     
-        @include responsive(screen){
-            @include fontTitle(48, 500);
+            margin: 0 0 $margin-2 0;
         }
     }
-     
-    h3{
-        @include fontText(16, 400);
-        color: $grey-3;
+}
 
-        margin: 0 0 20px 0;
-         
-        @include responsive(tablet){
-            @include fontText(20, 400);
-        }
-         
-        @include responsive(screen){
-            @include fontText(24, 400);
-        }
-         
-            span{
-                @include fontText(16, 400);
-         
-                @include responsive(tablet){
-                    @include fontText(20, 400);
-                }
-             
-                @include responsive(screen){
-                    @include fontText(24, 400);
-                }
-            }
-        }
-     
-    p{
-        @include fontText(16, 400);
-        color: $grey-3;
+.flexDiv{
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    gap: $gap-1;
 
-        margin: 0 0 20px 0;
-
-        @include responsive(tablet){
-            @include fontText(20, 400);
-        }
-
-        @include responsive(screen){
-            @include fontText(24, 400);
-        }
+    @include responsive(tablet){
+        gap: $gap-2;
     }
 
-    a{
-        @include flex(center, center);
-        gap: $gap-1;
-        padding: 12px 24px;
-        width: fit-content;
+    @include responsive(screen){
+        flex-wrap: nowrap;
+    }
 
-        background-color: $red-2;
-        color: $red-5;
-        border-radius: 5px;
-
-        @include fontText(20, 600);
-        text-transform: uppercase;
-
-        @include responsive(tablet){
-            @include fontText(24, 600);
-        }
+    div{
 
         @include responsive(screen){
-            @include fontText(32, 600);
+            flex-basis: 50%;
         }
 
-        img{
-            width: 30px;
-
+        h1{
+            margin: 0 0 $margin-1 0;
+    
             @include responsive(tablet){
-                width: 35px;
+                margin: 0 0 $margin-2 0;
             }
-
+        }
+    
+        h2{
+            @include fontTitle(24, 500);
+            color: $grey-3;
+        
+            margin: 0 0 10px 0;
+             
+            @include responsive(tablet){
+                @include fontTitle(32, 500);
+            }
+             
             @include responsive(screen){
-                width: 40px;
+                @include fontTitle(48, 500);
+                margin: 0 0 20px 0;
+            }
+        }
+             
+        h3{
+            @include fontText(16, 400);
+            color: $grey-3;
+        
+            margin: 0 0 20px 0;
+                 
+            @include responsive(tablet){
+                @include fontText(20, 400);
+                margin: 0 0 $margin-1 0;
+            }
+                 
+            @include responsive(screen){
+                @include fontText(24, 400);
+                margin: 0 0 $margin-2 0;
+            }
+                 
+                span{
+                    @include fontText(16, 400);
+                 
+                    @include responsive(tablet){
+                        @include fontText(20, 400);
+                    }
+                 
+                    @include responsive(screen){
+                        @include fontText(24, 400);
+                    }
+                }
+            }
+             
+        p{
+            @include fontText(16, 400);
+            color: $grey-3;
+        
+            margin: 0 0 20px 0;
+        
+            @include responsive(tablet){
+                @include fontText(20, 400);
+                margin: 0 0 $margin-1 0;
+            }
+        
+            @include responsive(screen){
+                @include fontText(24, 400);
+                margin: 0 0 $margin-2 0;
+            }
+        }
+        
+        a{
+            @include flex(center, center);
+            gap: $gap-1;
+            padding: 12px 24px;
+            width: fit-content;
+        
+            background-color: $red-2;
+            color: $red-5;
+            border-radius: 5px;
+        
+            @include fontText(20, 600);
+            text-transform: uppercase;
+        
+            @include responsive(tablet){
+                @include fontText(24, 600);
+            }
+        
+            @include responsive(screen){
+                @include fontText(32, 600);
+            }
+        
+            img{
+                width: 30px;
+        
+                @include responsive(tablet){
+                    width: 35px;
+                }
+        
+                @include responsive(screen){
+                    width: 40px;
+                }
             }
         }
     }
 
     figure{
-        max-width: 700px;
-        max-height: 330px;
+        @include responsive(screen){
+            flex-basis: 50%;
+        }
+
+        img{
+            max-width: 650px;
+            max-height: 330px;
+            border-radius: 5px;
+            border: 3px solid $grey-6;
+        }
     }
 }
 

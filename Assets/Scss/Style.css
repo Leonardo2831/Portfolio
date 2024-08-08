@@ -262,6 +262,7 @@
   min-width: 200px;
   min-height: 200px;
   border-radius: 51% 49% 67% 33%/64% 45% 55% 36%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .main__about-me {
@@ -298,6 +299,15 @@
   }
 }
 
+.main__skills h1 {
+  margin: 0 0 30px 0;
+}
+@media (min-width: 768px) {
+  .main__skills h1 {
+    margin: 0 0 40px 0;
+  }
+}
+
 .skills__graphics {
   display: grid;
   gap: 20px;
@@ -314,6 +324,7 @@
 }
 .skills__graphics > div figure {
   width: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 1024px) {
   .skills__graphics > div figure {
@@ -324,8 +335,13 @@
   width: 100%;
   background-color: #3D3736;
   border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .skills__graphics > div .graphics div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
   padding: 5px 15px;
   min-width: -moz-fit-content;
   min-width: fit-content;
@@ -399,7 +415,46 @@
     padding: 80px 0 0 0;
   }
 }
-.projects h2 {
+.projects h1 {
+  margin: 0 0 30px 0;
+}
+@media (min-width: 768px) {
+  .projects h1 {
+    margin: 0 0 40px 0;
+  }
+}
+
+.flexDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .flexDiv {
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .flexDiv {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1024px) {
+  .flexDiv div {
+    flex-basis: 50%;
+  }
+}
+.flexDiv div h1 {
+  margin: 0 0 30px 0;
+}
+@media (min-width: 768px) {
+  .flexDiv div h1 {
+    margin: 0 0 40px 0;
+  }
+}
+.flexDiv div h2 {
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
   font-weight: 500;
@@ -408,7 +463,7 @@
   margin: 0 0 10px 0;
 }
 @media (min-width: 768px) {
-  .projects h2 {
+  .flexDiv div h2 {
     font-family: "Source Code Pro", monospace;
     font-size: 2rem;
     font-weight: 500;
@@ -416,14 +471,15 @@
   }
 }
 @media (min-width: 1024px) {
-  .projects h2 {
+  .flexDiv div h2 {
     font-family: "Source Code Pro", monospace;
     font-size: 3rem;
     font-weight: 500;
     line-height: 60px;
+    margin: 0 0 20px 0;
   }
 }
-.projects h3 {
+.flexDiv div h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -432,29 +488,31 @@
   margin: 0 0 20px 0;
 }
 @media (min-width: 768px) {
-  .projects h3 {
+  .flexDiv div h3 {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 26px;
+    margin: 0 0 30px 0;
   }
 }
 @media (min-width: 1024px) {
-  .projects h3 {
+  .flexDiv div h3 {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 31.2px;
+    margin: 0 0 40px 0;
   }
 }
-.projects h3 span {
+.flexDiv div h3 span {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 20.8px;
 }
 @media (min-width: 768px) {
-  .projects h3 span {
+  .flexDiv div h3 span {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
@@ -462,14 +520,14 @@
   }
 }
 @media (min-width: 1024px) {
-  .projects h3 span {
+  .flexDiv div h3 span {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 31.2px;
   }
 }
-.projects p {
+.flexDiv div p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -478,22 +536,24 @@
   margin: 0 0 20px 0;
 }
 @media (min-width: 768px) {
-  .projects p {
+  .flexDiv div p {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 26px;
+    margin: 0 0 30px 0;
   }
 }
 @media (min-width: 1024px) {
-  .projects p {
+  .flexDiv div p {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 31.2px;
+    margin: 0 0 40px 0;
   }
 }
-.projects a {
+.flexDiv div a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,7 +571,7 @@
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .projects a {
+  .flexDiv div a {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -519,29 +579,36 @@
   }
 }
 @media (min-width: 1024px) {
-  .projects a {
+  .flexDiv div a {
     font-family: "Roboto", sans-serif;
     font-size: 2rem;
     font-weight: 600;
     line-height: 41.6px;
   }
 }
-.projects a img {
+.flexDiv div a img {
   width: 30px;
 }
 @media (min-width: 768px) {
-  .projects a img {
+  .flexDiv div a img {
     width: 35px;
   }
 }
 @media (min-width: 1024px) {
-  .projects a img {
+  .flexDiv div a img {
     width: 40px;
   }
 }
-.projects figure {
-  max-width: 700px;
+@media (min-width: 1024px) {
+  .flexDiv figure {
+    flex-basis: 50%;
+  }
+}
+.flexDiv figure img {
+  max-width: 650px;
   max-height: 330px;
+  border-radius: 5px;
+  border: 3px solid #292221;
 }
 
 #javascript {
@@ -619,7 +686,6 @@ h1 {
   font-weight: 500;
   line-height: 40px;
   color: #CCC5C4;
-  margin: 0 0 30px 0;
 }
 @media (min-width: 768px) {
   h1 {
