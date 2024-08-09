@@ -5,15 +5,16 @@
         padding: $padding-3 0;
     }
 
+
     p{
         @include fontText(16, 400);
         color: $grey-4;
 
-        margin: 0 0 0 19px;
+        margin: $margin-1 0 0 20px;
 
         @include responsive(tablet){
             @include fontText(20, 400);
-            margin: $margin-2 0 0 19px;
+            margin: $margin-2 0 0 20px;
         }
 
         @include responsive(screen){
