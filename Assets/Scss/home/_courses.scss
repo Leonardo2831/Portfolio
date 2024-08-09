@@ -97,7 +97,7 @@
 }
 
 .courses__slide{
-    @include flex(center, center);
+    @include flex(stretch, center);
 }
 
 .slide{
