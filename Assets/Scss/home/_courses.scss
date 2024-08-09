@@ -12,14 +12,18 @@
     }
 
     > div{
-        width: 340px;
+        width: 260px;
         @include flex(center, flex-start);
 
         overflow: hidden;
         position: relative;
 
+        @include responsive(mobile){
+            width: 420px;
+        }
+
         @include responsive(tablet){
-            width: 600px;
+            width: 630px;
         }
 
         @include responsive(screen){
@@ -32,19 +36,28 @@
     
             position: absolute;
             top: 45%;
-            left: 10px;
+            left: 8px;
 
             cursor: pointer;
+
+            @include responsive(mobile){
+                width: 15px;
+                height: 25px;
+
+                left: 15px;
+            }
 
             @include responsive(tablet){
                 width: 20px;
                 height: 32px;
+
                 left: 20px;
             }
 
             @include responsive(screen){
                 width: 30px;
                 height: 48px;
+
                 left: 30px;
             }
         }
@@ -55,19 +68,28 @@
     
             position: absolute;
             top: 45%;
-            right: 10px;
+            right: 15px;
 
             cursor: pointer;
+
+            @include responsive(mobile){
+                width: 15px;
+                height: 25px;
+
+                right: 15px;
+            }
 
             @include responsive(tablet){
                 width: 20px;
                 height: 32px;
+
                 right: 20px;
             }
 
             @include responsive(screen){
                 width: 30px;
                 height: 48px;
+
                 right: 30px;
             }
         }
@@ -79,15 +101,19 @@
 }
 
 .slide{
-    width: 340px;
+    width: 260px;
 
     background-color: $grey-5;
     border-radius: 5px;
-    padding: $padding-1;
+    padding: 30px;
+
+    @include responsive(mobile){
+        width: 420px;
+    }
 
     @include responsive(tablet){
-        width: 600px;
-        padding: 50px;
+        width: 630px;
+        padding: $padding-1;
     }
 
     @include responsive(screen){
@@ -95,7 +121,7 @@
     }
 
     div{
-        max-width: 350px;
+        max-width: 300px;
         margin: 0 auto;
 
         h2{
@@ -126,6 +152,11 @@
             @include fontText(14, 400);
             color: $grey-2;
             margin: 10px 0 0 0;
+            max-width: 26ch;
+
+            @include responsive(mobile){
+                max-width: 35ch;
+            }
     
             @include responsive(tablet){
                 @include fontText(16, 400);
