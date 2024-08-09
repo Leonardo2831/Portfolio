@@ -313,6 +313,7 @@
   gap: 20px;
 }
 .skills__graphics > div {
+  margin: 0 0 0 20px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -407,19 +408,19 @@
   border-radius: 20px;
 }
 
-.projects {
+.main__projects {
   padding: 60px 0 0 0;
 }
 @media (min-width: 1024px) {
-  .projects {
+  .main__projects {
     padding: 80px 0 0 0;
   }
 }
-.projects h1 {
+.main__projects h1 {
   margin: 0 0 30px 0;
 }
 @media (min-width: 768px) {
-  .projects h1 {
+  .main__projects h1 {
     margin: 0 0 40px 0;
   }
 }
@@ -428,7 +429,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   gap: 20px;
 }
 @media (min-width: 768px) {
@@ -440,6 +441,9 @@
   .flexDiv {
     flex-wrap: nowrap;
   }
+}
+.flexDiv div {
+  margin: 0 0 0 20px;
 }
 @media (min-width: 1024px) {
   .flexDiv div {
@@ -629,6 +633,70 @@
 
 #sass {
   color: #CC6699;
+}
+
+.main__laguage {
+  padding: 60px 0;
+}
+@media (min-width: 1024px) {
+  .main__laguage {
+    padding: 80px 0;
+  }
+}
+.main__laguage div {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0 0 20px;
+}
+@media (min-width: 768px) {
+  .main__laguage div {
+    margin: 40px 0 0 20px;
+  }
+}
+.main__laguage div figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.main__laguage div figure img {
+  width: 30px;
+}
+@media (min-width: 768px) {
+  .main__laguage div figure img {
+    width: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__laguage div figure img {
+    width: 50px;
+  }
+}
+.main__laguage div figure p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 26px;
+  color: #CCC5C4;
+}
+@media (min-width: 768px) {
+  .main__laguage div figure p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 31.2px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__laguage div figure p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 26px;
+  }
 }
 
 * {
