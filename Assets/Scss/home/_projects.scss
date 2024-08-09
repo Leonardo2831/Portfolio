@@ -1,4 +1,4 @@
-.projects{
+.main__projects{
     padding: $padding-2 0 0 0;
 
     @include responsive(screen){
@@ -16,7 +16,7 @@
 
 .flexDiv{
     @include flex(center, flex-start);
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: $gap-1;
 
     @include responsive(tablet){
@@ -28,6 +28,7 @@
     }
 
     div{
+        margin: 0 0 0 20px;
 
         @include responsive(screen){
             flex-basis: 50%;
