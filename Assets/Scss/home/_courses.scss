@@ -1,92 +1,140 @@
-.main__courses h1{
-    margin: 0 0 20px 0;
+.main__courses{
+    h1{
+        margin: 0 0 20px 0;
 
-    @include responsive(tablet){
-        margin: 0 0 $margin-1 0;
+        @include responsive(tablet){
+            margin: 0 0 $margin-1 0;
+        }
+    
+        @include responsive(screen){
+            margin: 0 0 $margin-2 0;
+        }
     }
 
-    @include responsive(screen){
-        margin: 0 0 $margin-2 0;
+    > div{
+        width: 340px;
+        @include flex(center, center);
+
+        overflow: hidden;
+        position: relative;
+
+        @include responsive(tablet){
+            width: 600px;
+        }
+
+        @include responsive(screen){
+            width: 900px;
+        }
+
+        img:first-of-type{
+            width: 12px;
+            height: 20px;
+    
+            position: absolute;
+            top: 45%;
+            left: 10px;
+
+            cursor: pointer;
+
+            @include responsive(tablet){
+                width: 20px;
+                height: 32px;
+                left: 20px;
+            }
+
+            @include responsive(screen){
+                width: 30px;
+                height: 48px;
+                left: 30px;
+            }
+        }
+    
+        img:last-of-type{
+            width: 12px;
+            height: 20px;
+    
+            position: absolute;
+            top: 45%;
+            right: 10px;
+
+            cursor: pointer;
+
+            @include responsive(tablet){
+                width: 20px;
+                height: 32px;
+                right: 20px;
+            }
+
+            @include responsive(screen){
+                width: 30px;
+                height: 48px;
+                right: 30px;
+            }
+        }
     }
 }
 
 .courses__slide{
-    @include flex(center, flex-start);
-    overflow-x: hidden;
+    @include flex(center, center);
 }
 
 .slide{
-    max-width: 400px;
-    min-width: 250px;
+    width: 340px;
 
     background-color: $grey-5;
     border-radius: 5px;
-    padding: 30px;
-
-
-    position: relative;
+    padding: $padding-1;
 
     @include responsive(tablet){
-        padding: $padding-1;
+        width: 600px;
+        padding: 50px;
     }
 
     @include responsive(screen){
-        padding: $padding-1 $padding-3;
+        width: 900px;
     }
 
-    h2{
-        white-space: nowrap;
-        @include fontTitle(24, 600);
-        color: $grey-1;
+    div{
+        max-width: 350px;
+        margin: 0 auto;
 
-        @include responsive(tablet){
-            @include fontTitle(32, 400);
-        }
-
-        @include responsive(screen){
-            @include fontTitle(42, 400);
-        }
-    }   
+        h2{
+            white-space: nowrap;
+            @include fontTitle(24, 600);
+            color: $grey-1;
+            margin: 0 0 5px 0;
     
-    span{
-        @include fontText(14, 500);
-        color: $grey-3;
-
-        @include responsive(screen){
-            @include fontText(20, 500)
+            @include responsive(tablet){
+                @include fontTitle(32, 600);
+            }
+    
+            @include responsive(screen){
+                @include fontTitle(42, 600);
+            }
+        }   
+        
+        span{
+            @include fontText(14, 500);
+            color: $grey-3;
+    
+            @include responsive(screen){
+                @include fontText(20, 500)
+            }
         }
-    }
-
-    p{
-        @include fontText(14, 400);
-        color: $grey-2;
-        margin: 10px 0 0 0;
-
-        @include responsive(tablet){
-            @include fontText(16, 400);
-            margin: 20px 0 0 0;
+    
+        p{
+            @include fontText(14, 400);
+            color: $grey-2;
+            margin: 10px 0 0 0;
+    
+            @include responsive(tablet){
+                @include fontText(16, 400);
+                margin: 20px 0 0 0;
+            }
+    
+            @include responsive(screen){
+                @include fontText(20, 400);
+            }
         }
-
-        @include responsive(screen){
-            @include fontText(20, 400);
-        }
-    }
-
-    img:first-of-type{
-        width: 12px;
-        height: 20px;
-
-        position: absolute;
-        top: 50%;
-        left: 20px;
-    }
-
-    img:last-of-type{
-        width: 12px;
-        height: 20px;
-
-        position: absolute;
-        top: 50%;
-        right: 20px;
     }
 }

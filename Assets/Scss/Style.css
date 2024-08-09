@@ -795,57 +795,122 @@
     margin: 0 0 40px 0;
   }
 }
+.main__courses > div {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .main__courses > div {
+    width: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__courses > div {
+    width: 900px;
+  }
+}
+.main__courses > div img:first-of-type {
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__courses > div img:first-of-type {
+    width: 20px;
+    height: 32px;
+    left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__courses > div img:first-of-type {
+    width: 30px;
+    height: 48px;
+    left: 30px;
+  }
+}
+.main__courses > div img:last-of-type {
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__courses > div img:last-of-type {
+    width: 20px;
+    height: 32px;
+    right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .main__courses > div img:last-of-type {
+    width: 30px;
+    height: 48px;
+    right: 30px;
+  }
+}
 
 .courses__slide {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  overflow-x: hidden;
+  justify-content: center;
 }
 
 .slide {
-  max-width: 400px;
-  min-width: 250px;
+  width: 340px;
   background-color: #3D3736;
   border-radius: 5px;
-  padding: 30px;
-  position: relative;
+  padding: 40px;
 }
 @media (min-width: 768px) {
   .slide {
-    padding: 40px;
+    width: 600px;
+    padding: 50px;
   }
 }
 @media (min-width: 1024px) {
   .slide {
-    padding: 40px 80px;
+    width: 900px;
   }
 }
-.slide h2 {
+.slide div {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.slide div h2 {
   white-space: nowrap;
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 30px;
   color: #EBE4E4;
+  margin: 0 0 5px 0;
 }
 @media (min-width: 768px) {
-  .slide h2 {
+  .slide div h2 {
     font-family: "Source Code Pro", monospace;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 40px;
   }
 }
 @media (min-width: 1024px) {
-  .slide h2 {
+  .slide div h2 {
     font-family: "Source Code Pro", monospace;
     font-size: 2.625rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 52.5px;
   }
 }
-.slide span {
+.slide div span {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
@@ -853,14 +918,14 @@
   color: #CCC5C4;
 }
 @media (min-width: 1024px) {
-  .slide span {
+  .slide div span {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 26px;
   }
 }
-.slide p {
+.slide div p {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -869,7 +934,7 @@
   margin: 10px 0 0 0;
 }
 @media (min-width: 768px) {
-  .slide p {
+  .slide div p {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -878,26 +943,12 @@
   }
 }
 @media (min-width: 1024px) {
-  .slide p {
+  .slide div p {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 26px;
   }
-}
-.slide img:first-of-type {
-  width: 12px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-}
-.slide img:last-of-type {
-  width: 12px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  right: 20px;
 }
 
 * {
@@ -911,6 +962,10 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
   overflow-x: hidden;
 }
 
