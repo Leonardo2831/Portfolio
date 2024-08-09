@@ -26,17 +26,17 @@ buttonSlideRight.addEventListener('click', function(){
     if(positionSlide <= courses.length){
         // cada else é um tamanho de tela
         if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
             // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
 
         } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         } else if(widthScreen >= 768 && widthScreen < 1024){
-            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         } else if(widthScreen >= 1024){
-            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         }
         // caso a posição do slide for maior que o curso, irá resetar, voltar do início
@@ -54,28 +54,28 @@ buttonSlideLeft.addEventListener('click', function(){
     if(positionSlide <= courses.length && positionSlide > 0){
 
         if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
             // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
 
         } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         } else if(widthScreen >= 768 && widthScreen < 1024){
-            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px);`;
+            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         } else if(widthScreen >= 1024){
-            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px);`;
+            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
         }
 
     } else if(positionSlide < 1){
         // caso a posição for menor que 1 ele vai para o final 
         if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (courses.length - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-260 * (courses.length - 1)}px);`;
             // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
 
         } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (courses.length - 1)}px)`;
+            slide.style.cssText = `transform: translateX(${-420 * (courses.length - 1)}px);`;
 
         } else if(widthScreen >= 768 && widthScreen < 1024){
             slide.style.cssText = `transform: translateX(${-630 * (courses.length - 1)}px);`;
