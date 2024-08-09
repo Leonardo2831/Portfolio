@@ -1,15 +1,20 @@
 .main__projects{
+    display: grid;
+    gap: $gap-2;
     padding: $padding-2 0 0 0;
+
+    @include responsive(tablet){
+        gap: 40px;
+    }
 
     @include responsive(screen){
         padding: $padding-3 0 0 0;
+        gap: 50px;
     }
 
     h1{
-        margin: 0 0 $margin-1 0;
-
         @include responsive(tablet){
-            margin: 0 0 $margin-2 0;
+            margin: 0 0 $margin-1 0;
         }
     }
 }
