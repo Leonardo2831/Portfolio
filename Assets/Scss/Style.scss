@@ -46,10 +46,14 @@ body{
 
 	.main{
 		@include maxWidth;
-		padding: calc($padding-1 + 20px) $padding-1;
+		padding: $padding-1 20px;
+		
+		@include responsive(mobile){
+			padding: $padding-2 $padding-1;
+		}
 	
 		@include responsive(tablet){
-			padding: calc($padding-2 + 20px) $padding-2;
+			padding: $padding-3 $padding-2;
 		}
 	}
 
