@@ -10,6 +10,7 @@
     gap: $gap-1;
 
     > div{
+        margin: 0 0 0 20px;
         @include flex(center, flex-start);
         gap: $gap-1;
         
