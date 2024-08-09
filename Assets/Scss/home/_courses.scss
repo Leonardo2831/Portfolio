@@ -13,7 +13,7 @@
 
     > div{
         width: 340px;
-        @include flex(center, center);
+        @include flex(center, flex-start);
 
         overflow: hidden;
         position: relative;
