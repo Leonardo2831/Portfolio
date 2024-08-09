@@ -822,11 +822,28 @@
   }
 }
 .slide h2 {
+  white-space: nowrap;
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 30px;
   color: #EBE4E4;
+}
+@media (min-width: 768px) {
+  .slide h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .slide h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 52.5px;
+  }
 }
 .slide span {
   font-family: "Roboto", sans-serif;
@@ -835,12 +852,37 @@
   line-height: 18.2px;
   color: #CCC5C4;
 }
+@media (min-width: 1024px) {
+  .slide span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
 .slide p {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 18.2px;
   color: #E0D9D7;
+  margin: 10px 0 0 0;
+}
+@media (min-width: 768px) {
+  .slide p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20.8px;
+  }
+}
+@media (min-width: 1024px) {
+  .slide p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 26px;
+  }
 }
 .slide img:first-of-type {
   width: 12px;

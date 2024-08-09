@@ -35,18 +35,40 @@
     }
 
     h2{
+        white-space: nowrap;
         @include fontTitle(24, 600);
         color: $grey-1;
+
+        @include responsive(tablet){
+            @include fontTitle(32, 400);
+        }
+
+        @include responsive(screen){
+            @include fontTitle(42, 400);
+        }
     }   
     
     span{
         @include fontText(14, 500);
         color: $grey-3;
+
+        @include responsive(screen){
+            @include fontText(20, 500)
+        }
     }
 
     p{
         @include fontText(14, 400);
         color: $grey-2;
+        margin: 10px 0 0 0;
+
+        @include responsive(tablet){
+            @include fontText(16, 400);
+        }
+
+        @include responsive(screen){
+            @include fontText(20, 400);
+        }
     }
 
     img:first-of-type{
