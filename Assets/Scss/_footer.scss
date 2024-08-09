@@ -1,0 +1,65 @@
+.footer{
+    @include flex(start, center);
+    flex-direction: column;
+    gap: $gap-1;
+    padding: 20px;
+
+    @include responsive(tablet){
+        padding: $padding-1;
+        gap: $gap-2;
+    }
+
+    @include responsive(screen){
+        padding: $padding-2;
+    }
+
+    picture{
+        @include flex(center, flex-start);
+        gap: $gap-1;
+
+        a img{
+            width: 30px;
+    
+            @include responsive(tablet){
+                width: 40px;
+            }
+    
+            @include responsive(screen){
+                width: 50px;
+            }
+        }
+    }
+
+    a{
+        @include flex(center, flex-start);
+        gap: 10px;
+        margin: 0 0 0 20px;
+
+        cursor: pointer;
+
+        img{
+            width: 30px;
+    
+            @include responsive(tablet){
+                width: 40px;
+            }
+    
+            @include responsive(screen){
+                width: 50px;
+            }
+        }
+
+        p{
+            @include fontText(16, 600);
+            color: $grey-1;
+
+            @include responsive(tablet){
+                @include fontText(20, 600);
+            }
+    
+            @include responsive(screen){
+                @include fontText(24, 600);
+            }
+        }
+    }
+}
