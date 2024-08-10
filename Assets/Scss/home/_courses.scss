@@ -12,23 +12,11 @@
     }
 
     > div{
-        width: 260px;
         @include flex(center, flex-start);
+        border-radius: 5px;
 
         overflow: hidden;
         position: relative;
-
-        @include responsive(mobile){
-            width: 420px;
-        }
-
-        @include responsive(tablet){
-            width: 630px;
-        }
-
-        @include responsive(screen){
-            width: 900px;
-        }
 
         img:first-of-type{
             width: 12px;
@@ -101,24 +89,12 @@
 }
 
 .slide{
-    width: 260px;
-
     background-color: $grey-5;
     border-radius: 5px;
     padding: 30px;
 
-    @include responsive(mobile){
-        width: 420px;
-    }
-
-    @include responsive(tablet){
-        width: 630px;
-        padding: $padding-1;
-    }
-
-    @include responsive(screen){
-        width: 900px;
-    }
+    @include flex(start, center);
+    flex-direction: column;
 
     div{
         max-width: 300px;
@@ -152,19 +128,17 @@
             @include fontText(14, 400);
             color: $grey-2;
             margin: 10px 0 0 0;
-            max-width: 26ch;
-
-            @include responsive(mobile){
-                max-width: 35ch;
-            }
+            max-width: 35ch;
     
             @include responsive(tablet){
                 @include fontText(16, 400);
                 margin: 20px 0 0 0;
+                max-width: $max-ch-2;
             }
     
             @include responsive(screen){
                 @include fontText(20, 400);
+                max-width: $max-ch-3;
             }
         }
     }

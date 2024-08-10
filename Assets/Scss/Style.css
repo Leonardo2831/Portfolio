@@ -802,27 +802,12 @@
   }
 }
 .main__courses > div {
-  width: 260px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
-}
-@media (min-width: 480px) {
-  .main__courses > div {
-    width: 420px;
-  }
-}
-@media (min-width: 768px) {
-  .main__courses > div {
-    width: 630px;
-  }
-}
-@media (min-width: 1024px) {
-  .main__courses > div {
-    width: 900px;
-  }
 }
 .main__courses > div img:first-of-type {
   width: 12px;
@@ -890,26 +875,13 @@
 }
 
 .slide {
-  width: 260px;
   background-color: #3D3736;
   border-radius: 5px;
   padding: 30px;
-}
-@media (min-width: 480px) {
-  .slide {
-    width: 420px;
-  }
-}
-@media (min-width: 768px) {
-  .slide {
-    width: 630px;
-    padding: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .slide {
-    width: 900px;
-  }
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
 }
 .slide div {
   max-width: 300px;
@@ -962,12 +934,7 @@
   line-height: 18.2px;
   color: #E0D9D7;
   margin: 10px 0 0 0;
-  max-width: 26ch;
-}
-@media (min-width: 480px) {
-  .slide div p {
-    max-width: 35ch;
-  }
+  max-width: 35ch;
 }
 @media (min-width: 768px) {
   .slide div p {
@@ -976,6 +943,7 @@
     font-weight: 400;
     line-height: 20.8px;
     margin: 20px 0 0 0;
+    max-width: 55ch;
   }
 }
 @media (min-width: 1024px) {
@@ -984,6 +952,7 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 26px;
+    max-width: 65ch;
   }
 }
 
