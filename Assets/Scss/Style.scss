@@ -115,6 +115,7 @@ p{
 }
 
 // animation
+// créditos: https://youtube.com/shorts/AAQemQCgKXc?si=QoZmv8EZPHJ5Xt6D
 .main section{
 	transform: translateX(-100%);
 	opacity: 0;
@@ -137,4 +138,3 @@ p{
 		animation-delay: #{$delay};
 	}
 }
-// créditos: https://youtube.com/shorts/AAQemQCgKXc?si=QoZmv8EZPHJ5Xt6D
