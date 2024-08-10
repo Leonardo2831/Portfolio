@@ -40,13 +40,13 @@ for(let i = 0; i < sections.length; i++){
                 });
 
         } else if(index === 5){
-            // 2
             // o delay agora será do ultimo projeto de design + 0.2
             delay = delayDesign + 0.2;
             
             section.style.animationDelay = `${delay}s`;
 
         } else if(index === 6){
+            // delay para sexta seção, que será delay do ultimo design + 0.4
             delay = delayDesign + 0.4;
             section.style.animationDelay = `${delay}s`;
         }
