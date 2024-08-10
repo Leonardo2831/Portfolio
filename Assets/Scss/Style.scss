@@ -113,3 +113,28 @@ p{
 		max-width: $max-ch-3;
 	}
 }
+
+// animation
+.main section{
+	transform: translateX(-100%);
+	opacity: 0;
+	animation: parallaxScss 1s forwards;
+}
+
+@keyframes parallaxScss {
+	0%{
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@for $i from 1 to 6 {
+	$delay: ($i - 1) * 0.2s;
+
+	section:nth-of-type(#{$i}){
+		animation-delay: #{$delay};
+	}
+}
+// créditos: https://youtube.com/shorts/AAQemQCgKXc?si=QoZmv8EZPHJ5Xt6D
