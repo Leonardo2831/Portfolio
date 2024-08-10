@@ -14,6 +14,13 @@ const buttonSlideLeft = document.querySelector('.main__courses div img:first-of-
 const buttonSlideRight = document.querySelector('.main__courses div img:last-of-type');
 
 const widthScreen = window.innerWidth;
+const frame = document.querySelector('.main__courses div');
+const widthFrame = parseFloat(window.getComputedStyle(frame).width);
+
+// adicionando o width do tamanho do frame para cada slide
+courses.forEach(course => {
+    course.style.width = `${widthFrame}px`;
+});
 
 // posição inicial
 let positionSlide = 1;
@@ -23,23 +30,9 @@ buttonSlideRight.addEventListener('click', function(){
     positionSlide++;
 
     // verifica se posição do slide é menor que a quantidade de cursos
+    // caso a posição do slide for maior que o curso, irá para else if, resetando ao estilo normal
     if(positionSlide <= courses.length){
-        // cada else é um tamanho de tela
-        if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-            // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
-
-        } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        } else if(widthScreen >= 768 && widthScreen < 1024){
-            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        } else if(widthScreen >= 1024){
-            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        }
-        // caso a posição do slide for maior que o curso, irá resetar, voltar do início
+        slide.style.cssText = `transform: translateX(${-widthFrame * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
 
     } else if(positionSlide > courses.length){
         positionSlide = 1;
@@ -48,43 +41,16 @@ buttonSlideRight.addEventListener('click', function(){
 });
 
 buttonSlideLeft.addEventListener('click', function(){
+    // diminui 1 a cada clique
     positionSlide--;
-    // valor negativo para retroceder 1
 
+    // verifica se a posição do slide é menor que a quantidade de cursos e se a posição do slide maior que 0
+    // caso não ser e a posição for menor que 1 ele vai para o final
     if(positionSlide <= courses.length && positionSlide > 0){
-
-        if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-            // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
-
-        } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        } else if(widthScreen >= 768 && widthScreen < 1024){
-            slide.style.cssText = `transform: translateX(${-630 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        } else if(widthScreen >= 1024){
-            slide.style.cssText = `transform: translateX(${-900 * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
-
-        }
-
+        slide.style.cssText = `transform: translateX(${-widthFrame * (positionSlide - 1)}px); transition: all 0.3s ease-in;`;
     } else if(positionSlide < 1){
-        // caso a posição for menor que 1 ele vai para o final 
-        if(widthScreen < 480){
-            slide.style.cssText = `transform: translateX(${-260 * (courses.length - 1)}px);`;
-            // como a posição inicial é uma, para contas foi necessário tirar 1 da posição
+        slide.style.cssText = `transform: translateX(${-(widthFrame * (courses.length - 1))}px);`;
 
-        } else if(widthScreen >= 480 && widthScreen < 768){
-            slide.style.cssText = `transform: translateX(${-420 * (courses.length - 1)}px);`;
-
-        } else if(widthScreen >= 768 && widthScreen < 1024){
-            slide.style.cssText = `transform: translateX(${-630 * (courses.length - 1)}px);`;
-
-        } else if(widthScreen >= 1024){
-            slide.style.cssText = `transform: translateX(${-900 * (courses.length - 1)}px);`;
-
-        }
-
-        positionSlide = 3;
+        positionSlide = courses.length;
     }
 });
