@@ -46,7 +46,7 @@ for(let i = 0; i < sections.length; i++){
             
             section.style.animationDelay = `${delay}s`;
 
-        } else {
+        } else if(index === 6){
             delay = delayDesign + 0.4;
             section.style.animationDelay = `${delay}s`;
         }
