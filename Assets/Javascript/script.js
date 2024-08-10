@@ -15,7 +15,7 @@ const buttonSlideRight = document.querySelector('.main__courses div img:last-of-
 
 const widthScreen = window.innerWidth;
 const frame = document.querySelector('.main__courses div');
-const widthFrame = parseFloat(window.getComputedStyle(frame).width);
+const widthFrame = parseFloat(getComputedStyle(frame).width);
 
 // adicionando o width do tamanho do frame para cada slide
 courses.forEach(course => {
