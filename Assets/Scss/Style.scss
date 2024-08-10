@@ -116,10 +116,11 @@ p{
 
 // animation
 // créditos: https://youtube.com/shorts/AAQemQCgKXc?si=QoZmv8EZPHJ5Xt6D
-.main section{
+.main section,
+.flexDiv{
 	transform: translateX(-100%);
 	opacity: 0;
-	animation: parallaxScss 1s forwards;
+	animation: parallaxScss 0.7s forwards;
 }
 
 @keyframes parallaxScss {
@@ -128,13 +129,5 @@ p{
 	100%{
 		opacity: 1;
 		transform: translateX(0);
-	}
-}
-
-@for $i from 1 to 6 {
-	$delay: ($i - 1) * 0.2s;
-
-	section:nth-of-type(#{$i}){
-		animation-delay: #{$delay};
 	}
 }
