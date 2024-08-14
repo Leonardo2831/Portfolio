@@ -50,8 +50,8 @@
   background-color: #14100F;
   position: absolute;
   top: 100%;
-  right: -100%;
-  transition: right 0.3s ease-in-out;
+  right: 0;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .header__links {
@@ -65,10 +65,6 @@
     right: auto;
     top: auto;
   }
-}
-.header__links.active {
-  right: 0;
-  z-index: 1;
 }
 .header__links li {
   display: flex;
@@ -119,6 +115,14 @@
   .header__links li:first-child a::after {
     width: 118px;
   }
+}
+
+.js .header__links {
+  right: -100%;
+  transition: right 0.3s ease-in-out;
+}
+.js .header__links.activeMenu {
+  right: 0;
 }
 
 .header__menu {
@@ -223,7 +227,12 @@
   }
 }
 
+.js .main__introduction {
+  margin: 0;
+}
+
 .main__introduction {
+  margin: 160px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,6 +242,11 @@
 @media (min-width: 480px) {
   .main__introduction {
     flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1024px) {
+  .main__introduction {
+    margin: 0;
   }
 }
 .main__introduction h1 {
@@ -531,6 +545,9 @@
   .flexDiv {
     flex-wrap: nowrap;
   }
+}
+.flexDiv ~ .flexDiv {
+  margin: 0 0 2rem 0;
 }
 .flexDiv div {
   margin: 0 0 0 20px;
@@ -967,7 +984,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -1069,11 +1085,17 @@ p {
   }
 }
 
-.main section,
-.flexDiv {
-  transform: translateX(-100%);
+.js .main section,
+.js .flexDiv {
+  transform: translateX(-60%);
   opacity: 0;
-  animation: parallaxScss 0.7s forwards;
+  transition: all 0.6s ease-in-out;
+}
+
+.js .main section.activeSection,
+.js .main div.activeSection {
+  transform: translate(0);
+  opacity: 1;
 }
 
 @keyframes parallaxScss {
