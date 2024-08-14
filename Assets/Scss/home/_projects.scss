@@ -32,6 +32,10 @@
         flex-wrap: nowrap;
     }
 
+    ~ .flexDiv{
+        margin: 0 0 2rem 0;
+    }
+
     div{
         margin: 0 0 0 20px;
 
