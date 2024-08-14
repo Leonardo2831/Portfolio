@@ -1,10 +1,19 @@
+.js .main__introduction{
+    margin: 0;
+}
+
 .main__introduction{
+    margin: 160px 0 0 0;
     @include flex(center, space-between);
     flex-wrap: wrap;
     gap: $gap-1;
 
     @include responsive(mobile){
         flex-wrap: nowrap;
+    }
+
+    @include responsive(screen){
+        margin: 0;
     }
 
     h1{

@@ -40,9 +40,8 @@
 
     position: absolute;
     top: 100%;
-    right: -100%;
-
-    transition: right 0.3s ease-in-out;
+    right: 0;
+    z-index: 1;
 
     @include responsive(screen){
         @include flex(center, space-between);
@@ -53,11 +52,6 @@
         position: static;
         right: auto;
         top: auto;
-    }
-
-    &.active{
-        right: 0;
-        z-index: 1;
     }
 
     li{
@@ -98,6 +92,16 @@
                 }
             }
         }
+    }
+}
+
+.js .header__links{
+    right: -100%;
+
+    transition: right 0.3s ease-in-out;
+
+    &.activeMenu{
+        right: 0;
     }
 }
 
