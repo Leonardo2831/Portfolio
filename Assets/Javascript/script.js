@@ -93,14 +93,14 @@ function slide(){
 slide();
 
 function scrollBehaviorSmooth(){
-    const headerLinks = document.querySelectorAll('js-scrollSmooth li a[href=^"#"]');
+    const headerLinks = document.querySelectorAll('.js-scrollSmooth a[href^="#"]');
 
     if(headerLinks){
         function scrollSmooth(event){
             event.preventDefault();
-            const href = this.getAttribute('href');
-            const sectionLink = document.querySelector(href);
-
+            const hrefLinks = this.getAttribute('href');
+            const sectionLink = document.querySelector(hrefLinks);
+    
             sectionLink.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
