@@ -6,6 +6,7 @@
     <meta name="description" content="Portifólio de Leonardo Reis Ferraz">
     <meta name="author" content="Leonardo Reis Ferraz">
     <meta name="keywords" content="Portfólio, Leonardo Reis Ferraz">
+    <script> document.documentElement.classList.add('js'); </script>
     <link rel="stylesheet" href="Assets/Scss/Style.css">
     <title>Portfólio</title>
 </head>
@@ -13,7 +14,7 @@
     <div class="background">
         <header class="header">
             <h1>console.log('leonardo');</h1>
-            <ul class="header__links">
+            <ul class="header__links js-menuLinks js-scrollSmooth">
                 <li>
                     <a href="#projects">projetos</a>
                 </li>
@@ -24,7 +25,7 @@
                     <a href="#">currículo</a>
                 </li>
             </ul>
-            <div class="header__menu">
+            <div class="header__menu js-menu">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -34,7 +35,7 @@
     <div class="background">
         <main class="main">
 
-            <section class="main__introduction">
+            <section class="main__introduction js-showSection">
                 <h1>
                     Olá, meu nome é
                     <b>Leonardo Reis Ferraz</b>,
@@ -45,16 +46,16 @@
                 </figure>
             </section>
 
-            <section class="main__about-me">
+            <section class="main__about-me js-showSection">
                 <h1>sobre mim</h1>
                 <p>
                     Atualmente sou estudante do ensino médio. Estou buscando minha evolução no mundo da programação. Possuo um conhecimento básico em Javascript, mas tenho um grande conhecimento já em scss e também as tecnologias básicas como css3 e html5. Pretendo cursar engenharia de software e adentrar ainda mais no mundo da tecnologia.
                 </p>
             </section>
 
-            <section class="main__skills">
+            <section class="main__skills js-showSection">
                 <h1>skills</h1>
-                <picture class="skills__graphics">
+                <picture class="skills__graphics js-graphics">
 
                     <div>
                         <figure>
@@ -124,19 +125,19 @@
                 </picture>
             </section>
 
-            <section class="main__projects" id="projects">
+            <section class="main__projects js-showSection" id="projects">
                 <h1>projetos programação</h1>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>bikcraft</h2>
                         <h3>
                             Tecnologias: 
-                            <span id="javascript">Javascript</span> 
+                            <span id="javascript">javascript</span> 
                             <span id="css3">css3</span>
                             <span id="html5">html5</span>
                         </h3>
                         <p>
-                            Projeto do curso  Origamid, feito em conjunto  com o programador Luiz Antônio Martinez Filho. Esse é um projeto no qual o objetivo era desenvolver nosso conhecimento em javascript e posicionamento.
+                            Projeto do curso da Origamid, feito em conjunto  com o programador Luiz Antônio Martinez Filho. Esse é um projeto no qual o objetivo era desenvolver nosso conhecimento em javascript e posicionamento.
                         </p>
                         <a href="https://leozinho2831.github.io/Bikcraft/" target="_blank">
                             Veja mais 
@@ -147,12 +148,12 @@
                         <img src="Assets/Images/images projects/bikcraft.jpg" alt="Bikcraft">
                     </figure>
                 </div>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>divine sushi</h2>
                         <h3>
                             Tecnologias: 
-                            <span id="javascript">Javascript</span> 
+                            <span id="javascript">javascript</span> 
                             <span id="css3">css3</span>
                             <span id="html5">html5</span>
                         </h3>
@@ -168,12 +169,12 @@
                         <img src="Assets/Images/images projects/Divine Sushi.jpg" alt="Divine Sushi">
                     </figure>
                 </div>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>apple clone</h2>
                         <h3>
                             Tecnologias: 
-                            <span id="javascript">Javascript</span> 
+                            <span id="javascript">javascript</span> 
                             <span id="css3">css3</span>
                             <span id="html5">html5</span>
                         </h3>
@@ -189,17 +190,17 @@
                         <img src="Assets/Images/images projects/Apple Clone.jpg" alt="Apple Clone">
                     </figure>
                 </div>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>LeScone</h2>
                         <h3>
                             Tecnologias: 
-                            <span id="javascript">Javascript</span> 
-                            <span id="sass">Scss</span>
+                            <span id="javascript">javascript</span> 
+                            <span id="sass">scss</span>
                             <span id="html5">html5</span>
                         </h3>
                         <p>
-                            Projeto do curso  Origamid. Esse é um projeto no qual o objetivo era desenvolver o conhecimento em scss, um pré processador que melhorar o css3.
+                            Projeto do curso da Origamid. Esse é um projeto no qual o objetivo era desenvolver o conhecimento em scss, um pré processador que melhorar o css3.
                         </p>
                         <a href="https://leozinho2831.github.io/Le-Scone/" target="_blank">
                             Veja mais 
@@ -210,7 +211,7 @@
                         <img src="Assets/Images/images projects/LeScone.jpg" alt="LeScone">
                     </figure>
                 </div>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>flexblog</h2>
                         <h3>
@@ -219,7 +220,7 @@
                             <span id="html5">html5</span>
                         </h3>
                         <p>
-                            Projeto do curso  Origamid. Projeto no qual o objetivo tem objetivo de desenvolver o conhecimento em posicionamento com flex. Esse projeto possui o mínimo de uso de media query.
+                            Projeto do curso da Origamid. Projeto no qual o objetivo tem objetivo de desenvolver o conhecimento em posicionamento com flex. Esse projeto possui o mínimo de uso de media query.
                         </p>
                         <a href="https://leozinho2831.github.io/FlexBlog/" target="_blank">
                             Veja mais 
@@ -230,31 +231,32 @@
                         <img src="Assets/Images/images projects/FlexBlog.jpg" alt="FlexBlog">
                     </figure>
                 </div>
-                <div class="flexDiv programming">
+                <div class="flexDiv js-showSection">
                     <div>
-                        <h2>wildbeast</h2>
+                        <h2>Animais Fantásticos</h2>
                         <h3>
                             Tecnologias: 
+                            <span id="javascript">javascript</span>
                             <span id="css3">css3</span>
                             <span id="html5">html5</span>
                         </h3>
                         <p>
-                            Projeto do curso  Origamid. Esse é um projeto no qual o objetivo era desenvolver nosso conhecimento em posicionamento grid. Com variadade de layouts responsivos enquanto vai diminuindo a tela, trazendo diversidade ao site.
+                            Projeto do curso da Origamid. Um projeto que aborda o uso total de javascript para criar novas interações com o usuário, buscando soluções até mesmo quando ele não possui javascript ativado.
                         </p>
-                        <a href="https://leozinho2831.github.io/Wildbeast/" target="_blank">
+                        <a href="https://leozinho2831.github.io/Fantastic-Animals/" target="_blank">
                             Veja mais 
                             <img src="Assets/Images/components/link.svg" alt="link">
                         </a>
                     </div>
                     <figure>
-                        <img src="Assets/Images/images projects/Wildbeast.jpg" alt="Wildbeast">
+                        <img src="Assets/Images/images projects/Fantastic Animals.jpg" alt="Animais Fantásticos">
                     </figure>
                 </div>
             </section>
 
-            <section class="main__projects disign">
+            <section class="main__projects js-showSection">
                 <h1>design figma</h1>
-                <div class="flexDiv design">
+                <div class="flexDiv js-showSection">
                     <div>
                         <h2>portfólio</h2>
                         <h3>
@@ -274,8 +276,8 @@
                     </figure>
                 </div>
             </section>
-
-            <section class="main__laguage">
+ 
+            <section class="main__laguage js-showSection">
                 <h1>línguas</h1>
                 <div>
                     <figure>
@@ -289,32 +291,32 @@
                 </div>
             </section>
 
-            <section class="main__courses">
+            <section class="main__courses js-coursesMain js-showSection">
                 <h1>cursos</h1>
                 <div>
-                    <picture class="courses__slide">
-                        <figure class="slide">
+                    <picture class="courses__slide js-courses">
+                        <figure class="slide js-slide">
                             <div>
                                 <h2>flex-box</h2>
                                 <span>origamid</span>
                                 <p>Curso voltado ao uso do estilo flex-box do css, em conjunto é abordado a responsividade com flex em sites.</p>
                             </div>
                         </figure>
-                        <figure class="slide">
+                        <figure class="slide js-slide">
                             <div>
                                 <h2>grid</h2>
                                 <span>origamid</span>
                                 <p>Curso voltado ao uso do estilo grid do css, no qual aborda o uso de várias colunas para melhor posicionamento nos sites.</p>
                             </div>
                         </figure>
-                        <figure class="slide">
+                        <figure class="slide js-slide">
                             <div>
                                 <h2>sass</h2>
                                 <span>origamid</span>
                                 <p>Curso voltado ao uso de sass, um pré processador de css no qual traz novas funções práticas para o css3, como funções, loops básicos.</p>
                             </div>
                         </figure>
-                        <figure class="slide">
+                        <figure class="slide js-slide">
                             <div>
                                 <h2>html e css</h2>
                                 <span>origamid</span>
@@ -352,7 +354,6 @@
     </div>
 
     <script src="Assets/Javascript/script.js"></script>
-    <script src="Assets/Javascript/efectParallax.js"></script>
     <script src="Assets/Javascript/graphics.js"></script>
 </body>
 </html>
