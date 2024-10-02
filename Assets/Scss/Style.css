@@ -742,6 +742,14 @@
   color: #CC6699;
 }
 
+#tailwind {
+  color: #16BAB9;
+}
+
+#dayjs {
+  color: #ff8477;
+}
+
 .main__laguage {
   padding: 60px 0;
 }
