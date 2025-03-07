@@ -16,7 +16,7 @@ openMenu();
 
 function showSectionAnimation(){
     const sections = document.querySelectorAll('.js-showSection');
-    const windowHalf = window.innerHeight * 0.5;
+    const windowHalf = window.innerHeight * 0.6;
     const nameClass = 'activeSection';
 
     if(sections.length){
