@@ -424,7 +424,6 @@
 }
 .skills__graphics > div figure {
   width: 40px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 1024px) {
   .skills__graphics > div figure {
@@ -482,28 +481,27 @@
   }
 }
 .skills__graphics div:nth-of-type(1) .graphics div {
-  background-image: linear-gradient(#CC6699, #AD3D82);
-  width: 63%;
+  background-image: linear-gradient(to right, #16BAB9, #1D91AE);
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(2) .graphics div {
-  background-image: linear-gradient(#33A9DC, #1572B6);
-  width: 91%;
+  background-image: linear-gradient(#CC6699, #AD3D82);
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(3) .graphics div {
-  background-image: linear-gradient(#F16529, #DE4B25);
-  width: 100%;
+  background-image: linear-gradient(#33A9DC, #1572B6);
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(4) .graphics div {
   background-image: linear-gradient(#F4D016, #C7911F);
-  width: 9%;
   border-radius: 20px;
 }
 .skills__graphics div:nth-of-type(5) .graphics div {
+  background-image: linear-gradient(#F16529, #DE4B25);
+  border-radius: 20px;
+}
+.skills__graphics div:nth-of-type(6) .graphics div {
   background-image: linear-gradient(#03D081, #149959);
-  width: 27%;
   border-radius: 20px;
 }
 
