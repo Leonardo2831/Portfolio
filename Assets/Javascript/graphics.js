@@ -1,116 +1,71 @@
-function changeMonth(){
-    const graphicsBackground1 = document.querySelector('.js-graphics div:nth-of-type(1) .graphics div');
-    const graphicsBackground2 = document.querySelector('.js-graphics div:nth-of-type(2) .graphics div');
-    const graphicsBackground4 = document.querySelector('.js-graphics div:nth-of-type(4) .graphics div');
-    const graphicsBackground5 = document.querySelector('.js-graphics div:nth-of-type(5) .graphics div');
+dayjs.locale('pt-br');
 
-    const graphics1 = document.querySelector('.js-graphics div:nth-of-type(1) p');
-    const graphics2 = document.querySelector('.js-graphics div:nth-of-type(2) p');
-    const graphics3 = document.querySelector('.js-graphics div:nth-of-type(3) p');
-    const graphics4 = document.querySelector('.js-graphics div:nth-of-type(4) p');
-    const graphics5 = document.querySelector('.js-graphics div:nth-of-type(5) p');
+const graphicsTexts = document.querySelectorAll('.js-graphicsText');
 
-    const nameMes1 = document.querySelector('.js-graphics div:nth-of-type(1) span:first-of-type');
-    const nameMes2 = document.querySelector('.js-graphics div:nth-of-type(2) span:first-of-type');
-    const nameMes3 = document.querySelector('.js-graphics div:nth-of-type(3) span:first-of-type');
-    const nameMes4 = document.querySelector('.js-graphics div:nth-of-type(4) span:first-of-type');
-    const nameMes5 = document.querySelector('.js-graphics div:nth-of-type(5) span:first-of-type');
+const toDay = dayjs();
 
-    const nameMeses1 = document.querySelector('.js-graphics div:nth-of-type(1) span:last-of-type');
-    const nameMeses2 = document.querySelector('.js-graphics div:nth-of-type(2) span:last-of-type');
-    const nameMeses3 = document.querySelector('.js-graphics div:nth-of-type(3) span:last-of-type');
-    const nameMeses4 = document.querySelector('.js-graphics div:nth-of-type(4) span:last-of-type');
-    const nameMeses5 = document.querySelector('.js-graphics div:nth-of-type(5) span:last-of-type');
+// tecnologias com suas datas seguindo esse padrão para não haver conflito e resultar em NaN
+const initialDate = [
+    // tailwind
+    dayjs('2025-02-06', 'YYYY-MM-DD'),
+    // sass
+    dayjs('2024-08-14', 'YYYY-MM-DD'),
+    // css
+    dayjs('2024-05-20', 'YYYY-MM-DD'),
+    // javascript
+    dayjs('2024-11-13', 'YYYY-MM-DD'),
+    // html
+    dayjs('2024-03-28', 'YYYY-MM-DD'),
+    // figma
+    dayjs('2024-11-07', 'YYYY-MM-DD'),
+];
 
-    let fixedMonth = 8;
-    const fixedYear = 2024;
+// funções para o texto em plural
+const pluralYear = (years) => {
+    if(years == 1) return `${years} ano`;
+    return `${years} anos`;
+}
 
-    function checkMonth(){
-        const nowDate = new Date();
-        const nowYear = nowDate.getFullYear();
-        const nowMonth = nowDate.getMonth() + 1;
-        const nowDay = nowDate.getDate();
-        const variationMonths = Math.abs(nowMonth - fixedMonth);
-        const variationYears = Math.abs(nowYear - fixedYear);
+const pluralMonth = (months) => {
+    if(months == 1) return `${months} mês`;
+    return `${months} meses`;
+}
+
+graphicsTexts.forEach((graphicText ,index) => {
+
+    const dateGraphicText = initialDate[index];
     
-        // loop para somar mais 1 ao meses a cada mes que passar
-        if(nowDay === 30){
+    if(dateGraphicText){
+        const diffDateYear = toDay.diff(dateGraphicText, 'year');        
+        // divide por 12 e pega o resto, sendo eles os meses
+        const diffDateMonth = toDay.diff(dateGraphicText, 'month') % 12;
+
+        if(diffDateYear >= 0 && diffDateMonth >= 0){
+            if(diffDateYear == 0){
+
+                graphicText.textContent = pluralMonth(diffDateMonth);
     
-            // para os 4 meses depois de agosto
-            if(nowYear === 2024){
-                for(let i = 0; i < 1; i++){
-                    graphics1.innerHTML = `${variationMonths + Number(graphics1.innerHTML)}`;
-                    graphics2.innerHTML = `${variationMonths + Number(graphics2.innerHTML)}`;
-                    graphics3.innerHTML = `${variationMonths + Number(graphics3.innerHTML)}`;
-                    graphics4.innerHTML = `${variationMonths + Number(graphics4.innerHTML)}`;
-                    graphics5.innerHTML = `${variationMonths + Number(graphics5.innerHTML)}`;
-                }
+            } else {
+    
+                graphicText.textContent = 
+                diffDateMonth > 0 ? `${pluralYear(diffDateYear) } e ${pluralMonth(diffDateMonth)}` : pluralYear(diffDateYear);
+    
             }
-    
-            // para os próximos anos
-            if(nowYear > 2024){
-                for(let i = 0; i < 1; i++){
-                    // o calculo para os meses foi pego o valor incial + 4, no qual seria mesma coisa que pegar mes dezembro menos o numero inicial, adicionado mês atual, e somado a variação e anos - 1 vezes 12 para dar o valor dos meses para infinitos anos.
-                    graphics1.innerHTML = `${Number(graphics1.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
-                    graphics2.innerHTML = `${Number(graphics2.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
-                    graphics3.innerHTML = `${Number(graphics3.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
-                    graphics4.innerHTML = `${Number(graphics4.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
-                    graphics5.innerHTML = `${Number(graphics5.innerHTML) + 4 + nowMonth + (12 * (variationYears - 1))}`;
-                }
-            }
-        }
-    
-        if(graphics1.innerHTML == 1){
-            nameMes1.style = 'display: block;';
-            nameMeses1.style = 'display: none;';
-        } else {
-            nameMes1.style = 'display: none;';
-            nameMeses1.style = 'display: block;';
-        }
-    
-        if(graphics2.innerHTML == 1){
-            nameMes2.style = 'display: block;';
-            nameMeses2.style = 'display: none;';
-        } else {
-            nameMes2.style = 'display: none;';
-            nameMeses2.style = 'display: block;';
-        }
-    
-        if(graphics3.innerHTML == 1){
-            nameMes3.style = 'display: block;';
-            nameMeses3.style = 'display: none;';
-        } else {
-            nameMes3.style = 'display: none;';
-            nameMeses3.style = 'display: block;';
-        }
-    
-        if(graphics4.innerHTML == 1){
-            nameMes4.style = 'display: block;';
-            nameMeses4.style = 'display: none;';
-        } else {
-            nameMes4.style = 'display: none;';
-            nameMeses4.style = 'display: block;';
         }
         
-        if(graphics5.innerHTML == 1){
-            nameMes5.style = 'display: block;';
-            nameMeses5.style = 'display: none;';
-        } else {
-            nameMes5.style = 'display: none;';
-            nameMeses5.style = 'display: block;';
-        }
     }
-    checkMonth();
-    
-    // mudando width das div diante 
-    const graphics1Width = (Number(graphics1.innerHTML) / Number(graphics3.innerHTML)) * 100;
-    const graphics2Width = (Number(graphics2.innerHTML) / Number(graphics3.innerHTML)) * 100;
-    const graphics4Width = (Number(graphics4.innerHTML) / Number(graphics3.innerHTML)) * 100;
-    const graphics5Width = (Number(graphics5.innerHTML) / Number(graphics3.innerHTML)) * 100;
-    
-    graphicsBackground1.style = `width: ${graphics1Width}%;`;
-    graphicsBackground2.style = `width: ${graphics2Width}%;`;
-    graphicsBackground4.style = `width: ${graphics4Width}%;`;
-    graphicsBackground5.style = `width: ${graphics5Width}%;`;
-}
-changeMonth();
+});
+
+let diffDateOlder = toDay.diff(initialDate[4], 'month');
+
+// tamanho do gráfico
+graphicsTexts.forEach((graphicText, index) => {
+
+    // as contas irão ser feitas com base no gráfico de maior tempo de estudo, neste caso o html
+    const dateGraphicText = initialDate[index];
+    let diffDateMonth = toDay.diff(dateGraphicText, 'month');
+
+    const widthGraphicText = Number((diffDateMonth / diffDateOlder) * 100);
+
+    graphicText.parentElement.style.width = `${widthGraphicText}%`;
+});
