@@ -46,7 +46,6 @@ function slide(){
     const buttonSlideLeft = document.querySelector('.js-coursesMain div img:first-of-type');
     const buttonSlideRight = document.querySelector('.js-coursesMain div img:last-of-type');
     
-    const widthScreen = window.innerWidth;
     const frame = document.querySelector('.js-coursesMain div');
     const widthFrame = parseFloat(getComputedStyle(frame).width);
 
