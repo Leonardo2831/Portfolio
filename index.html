@@ -1,374 +1,539 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portifólio de Leonardo Reis Ferraz">
-    <meta name="author" content="Leonardo Reis Ferraz">
-    <meta name="keywords" content="Portfólio, Leonardo Reis Ferraz">
-    <script> document.documentElement.classList.add('js'); </script>
-    <link rel="stylesheet" href="Assets/Scss/Style.css">
-    <title>Portfólio</title>
-</head>
-<body>
-    <div class="background">
-        <header class="header">
-            <h1>console.log('leonardo');</h1>
-            <ul class="header__links js-menuLinks js-scrollSmooth">
-                <li>
-                    <a href="#projects">projetos</a>
-                </li>
-                <li>
-                    <a href="#contact">contato</a>
-                </li>
-                <li>
-                    <a href="#">currículo</a>
-                </li>
-            </ul>
-            <div class="header__menu js-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </header>
-    </div>
-    <div class="background">
-        <main class="main">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portifólio de Leonardo Reis Ferraz" />
+        <meta name="author" content="Leonardo Reis Ferraz" />
+        <meta name="keywords" content="Portfólio, Leonardo Reis Ferraz" />
+        <script>
+            document.documentElement.classList.add("js");
+        </script>
+        <link rel="stylesheet" href="Assets/Scss/Style.css" />
+        <title>Portfólio</title>
+    </head>
+    <body>
+        <div class="background">
+            <header class="header">
+                <h1>console.log('leonardo');</h1>
+                <ul class="header__links js-menuLinks js-scrollSmooth">
+                    <li>
+                        <a href="#projects">projetos</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contato</a>
+                    </li>
+                    <li>
+                        <a href="#">currículo</a>
+                    </li>
+                </ul>
+                <div class="header__menu js-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </header>
+        </div>
+        <div class="background">
+            <main class="main">
+                <section class="main__introduction js-showSection">
+                    <h1>
+                        Olá, meu nome é
+                        <b>Leonardo Reis Ferraz</b>, desenvolvedor
+                        <i>full-stack</i>
+                    </h1>
+                    <figure>
+                        <img
+                            src="Assets/Images/Leonardo Reis Ferraz.jpg"
+                            alt="Leonardo Reis Ferraz"
+                        />
+                    </figure>
+                </section>
 
-            <section class="main__introduction js-showSection">
-                <h1>
-                    Olá, meu nome é
-                    <b>Leonardo Reis Ferraz</b>,
-                    desenvolvedor <i>full-stack</i>
-                </h1>
-                <figure>
-                    <img src="Assets/Images/Leonardo Reis Ferraz.jpg" alt="Leonardo Reis Ferraz">
-                </figure>
-            </section>
+                <section class="main__about-me js-showSection">
+                    <h1>sobre mim</h1>
+                    <p>
+                        Sou um entusiasta da programação em constante evolução,
+                        apaixonado por desenvolvimento web. Possuo conhecimentos
+                        sólidos e aprofundados no ecossistema Front-End, criando
+                        interfaces modernas e responsivas com HTML5, CSS3,
+                        JavaScript, TypeScript, Tailwind CSS, além de
+                        prototipagem no Figma. Atualmente, estou dando os
+                        primeiros passos na carreira Back-End para me tornar um
+                        desenvolvedor Full-Stack, estudando Node.js, Java e
+                        bancos de dados como SQLite. Para complementar minha
+                        base teórica e prática, curso Engenharia de Software na
+                        UNIFAE (São João da Boa Vista).
+                    </p>
+                </section>
 
-            <section class="main__about-me js-showSection">
-                <h1>sobre mim</h1>
-                <p>
-                    Sou um entusiasta da programação em constante evolução, apaixonado por desenvolvimento web. Possuo conhecimentos sólidos e aprofundados no ecossistema Front-End, criando interfaces modernas e responsivas com HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, além de prototipagem no Figma. Atualmente, estou dando os primeiros passos na carreira Back-End para me tornar um desenvolvedor Full-Stack, estudando Node.js, Java e bancos de dados como SQLite. Para complementar minha base teórica e prática, curso Engenharia de Software na UNIFAE (São João da Boa Vista).
-                </p>
-            </section>
+                <section class="main__skills js-showSection">
+                    <h1>skills</h1>
+                    <picture class="skills__graphics">
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/tailwindcss.svg"
+                                    alt="Tailwind css"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>Tailwind CSS</h3>
+                            </div>
+                        </div>
 
-            <section class="main__skills js-showSection">
-                <h1>skills</h1>
-                <picture class="skills__graphics">
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/Sass.svg"
+                                    alt="Sass"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>Sass</h3>
+                            </div>
+                        </div>
 
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/Css 3.svg"
+                                    alt="Css 3"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>CSS 3</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/javascript.svg"
+                                    alt="Javascript"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>JavaScript</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/Html 5.svg"
+                                    alt="Html 5"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>HTML 5</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/figma.svg"
+                                    alt="Figma"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>Figma</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/java.svg"
+                                    alt="Java"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>Java</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/nodejs.svg"
+                                    alt="Node.js"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>Node.js</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/sqlite.svg"
+                                    alt="SQLite"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>SQLite</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img
+                                    src="Assets/Images/components/typescript.svg"
+                                    alt="TypeScript"
+                                />
+                            </figure>
+                            <div class="skill-info">
+                                <h3>TypeScript</h3>
+                            </div>
+                        </div>
+                    </picture>
+                </section>
+
+                <section class="main__projects js-showSection" id="projects">
+                    <h1>projetos programação</h1>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>in.orbit</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="tailwind">tailwind</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <h3>
+                                Bibliotecas:
+                                <span id="dayjs">day.js</span>
+                            </h3>
+                            <p>
+                                Projeto do evento nlw pocket-javascript da
+                                rocketseat, porém eu peguei a ideia
+                                disponibilizada no evento e modifiquei
+                                utilizando apenas javascript para um projeto sem
+                                banco de dados.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/in.orbit/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/InOrbit.jpg"
+                                alt="in.orbit"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>bikcraft</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="css3">css3</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <p>
+                                Projeto do curso da Origamid, feito em conjunto
+                                com o programador Luiz Antônio Martinez Filho.
+                                Esse é um projeto no qual o objetivo era
+                                desenvolver nosso conhecimento em javascript e
+                                posicionamento.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/Bikcraft/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/bikcraft.jpg"
+                                alt="Bikcraft"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>Florest</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="tailwind">tailwind</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <h3>
+                                Bibliotecas:
+                                <span id="openWeather">openWeather</span>
+                            </h3>
+                            <p>
+                                Projeto do curso da Origamid, feito em conjunto
+                                com o programador Luiz Antônio Martinez Filho.
+                                Esse é um projeto no qual o objetivo era
+                                desenvolver nosso conhecimento em javascript e
+                                posicionamento.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/Florest/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/Florest.jpg"
+                                alt="Florest"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>jogo da forca</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="java">java</span>
+                            </h3>
+                            <p>
+                                Jogo da forca que foi desenvolvido para
+                                aprendizagem de lógica orientada a objetos com
+                                Java e também para manipulação de arquivos CSV,
+                                no qual, anteriormente ao jogo, existe um
+                                cadastro local de usuário.
+                            </p>
+                            <a
+                                href="https://github.com/Leonardo2831/Forca-Java"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/Forca.png"
+                                alt="Jogo da Forca"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>animais fantásticos</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="css3">css3</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <p>
+                                Projeto do curso da Origamid. Um projeto que
+                                aborda o uso total de javascript para criar
+                                novas interações com o usuário, buscando
+                                soluções até mesmo quando ele não possui
+                                javascript ativado.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/Fantastic-Animals/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/Fantastic Animals.jpg"
+                                alt="Animais Fantásticos"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>divine sushi</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="css3">css3</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <p>
+                                Projeto com design do criador Jaydeep Kaila,
+                                feito em conjunto com o programador Luiz Antônio
+                                Martinez Filho. Um projeto voltado ao treino de
+                                css3, html5 e utilizando o básico do javascrip.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/Divine-Sushi/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/Divine Sushi.jpg"
+                                alt="Divine Sushi"
+                            />
+                        </figure>
+                    </div>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>apple clone</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="javascript">javascript</span>
+                                <span id="css3">css3</span>
+                                <span id="html5">html5</span>
+                            </h3>
+                            <p>
+                                Um clone da home da apple em 2022. Esse é um
+                                projeto no qual o objetivo era superar meus
+                                limites e entrar em um cenário de sites mais
+                                completos como de uma multinacional.
+                            </p>
+                            <a
+                                href="https://leonardo2831.github.io/AppleClone/"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/Apple Clone.jpg"
+                                alt="Apple Clone"
+                            />
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="main__projects js-showSection">
+                    <h1>design figma</h1>
+                    <div class="flexDiv js-showSection">
+                        <div>
+                            <h2>portfólio</h2>
+                            <h3>
+                                Tecnologias:
+                                <span id="figma">figma</span>
+                            </h3>
+                            <p>
+                                Design deste portfólio, no qual utilizei uma
+                                escalade cores criada por mim e estilos de fonte
+                                para encaixar-se perfeitamente com cada objetivo
+                                necessário, e assim criar um site harmônico
+                                entre cada elemento.
+                            </p>
+                            <a
+                                href="https://www.figma.com/design/1b4GrKFwtXwOpR0qJHSuM6/Portf%C3%B3lio?m=auto&t=ICeFiGaIGFRKJrDY-6"
+                                target="_blank"
+                            >
+                                Veja mais
+                                <img
+                                    src="Assets/Images/components/link.svg"
+                                    alt="link"
+                                />
+                            </a>
+                        </div>
+                        <figure>
+                            <img
+                                src="Assets/Images/images-projects/portfólio figma.jpg"
+                                alt="Portifólio Design"
+                            />
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="main__laguage js-showSection">
+                    <h1>línguas</h1>
                     <div>
                         <figure>
-                            <img src="Assets/Images/components/tailwindcss.svg" alt="Tailwind css">
+                            <img
+                                src="Assets/Images/components/estados-unidos.svg"
+                                alt="inglês"
+                            />
+                            <p>en básico</p>
                         </figure>
-                        <div class="skill-info">
-                            <h3>Tailwind CSS</h3>
-                        </div>
-                    </div>
-
-                    <div>
                         <figure>
-                            <img src="Assets/Images/components/Sass.svg" alt="Sass">
+                            <img
+                                src="Assets/Images/components/brasil.svg"
+                                alt="português"
+                            />
+                            <p>pt-br falante nativo</p>
                         </figure>
-                        <div class="skill-info">
-                            <h3>Sass</h3>
-                        </div>
                     </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/Css 3.svg" alt="Css 3">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>CSS 3</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/javascript.svg" alt="Javascript">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>JavaScript</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/Html 5.svg" alt="Html 5">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>HTML 5</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/figma.svg" alt="Figma">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>Figma</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/java.svg" alt="Java">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>Java</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/nodejs.svg" alt="Node.js">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>Node.js</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/sqlite.svg" alt="SQLite">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>SQLite</h3>
-                        </div>
-                    </div>
-
-                    <div>
-                        <figure>
-                            <img src="Assets/Images/components/typescript.svg" alt="TypeScript">
-                        </figure>
-                        <div class="skill-info">
-                            <h3>TypeScript</h3>
-                        </div>
-                    </div>
-
+                </section>
+            </main>
+        </div>
+        <div class="background">
+            <footer class="footer" id="contact">
+                <h1>contato</h1>
+                <picture>
+                    <a href="https://github.com/Leonardo2831" target="_blank">
+                        <img
+                            src="Assets/Images/components/Github.png"
+                            alt="Github"
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/leonardo_reis_ferraz/?igshid=MGNiNDI5ZTU%3D"
+                        target="_blank"
+                    >
+                        <img
+                            src="Assets/Images/components/Instagram.png"
+                            alt="Instagram"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/leonardo-ferraz-688095271/"
+                        target="_blank"
+                    >
+                        <img
+                            src="Assets/Images/components/LinkedIn.png"
+                            alt="LinkedIn"
+                        />
+                    </a>
                 </picture>
-            </section>
-
-            <section class="main__projects js-showSection" id="projects">
-                <h1>projetos programação</h1>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>in.orbit</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span> 
-                            <span id="tailwind">tailwind</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <h3>
-                            Bibliotecas:
-                            <span id="dayjs">day.js</span>
-                        </h3>
-                        <p>
-                            Projeto do evento nlw pocket-javascript da rocketseat, porém eu peguei a ideia disponibilizada no evento e modifiquei utilizando apenas javascript para um projeto sem banco de dados.
-                        </p>
-                        <a href="https://leozinho2831.github.io/in.orbit/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/InOrbit.jpg" alt="in.orbit">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>bikcraft</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span> 
-                            <span id="css3">css3</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <p>
-                            Projeto do curso da Origamid, feito em conjunto  com o programador Luiz Antônio Martinez Filho. Esse é um projeto no qual o objetivo era desenvolver nosso conhecimento em javascript e posicionamento.
-                        </p>
-                        <a href="https://leozinho2831.github.io/Bikcraft/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/bikcraft.jpg" alt="Bikcraft">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>Florest</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span> 
-                            <span id="tailwind">tailwind</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <h3>
-                            Bibliotecas:
-                            <span id="openWeather">openWeather</span>
-                        </h3>
-                        <p>
-                            Projeto do curso da Origamid, feito em conjunto  com o programador Luiz Antônio Martinez Filho. Esse é um projeto no qual o objetivo era desenvolver nosso conhecimento em javascript e posicionamento.
-                        </p>
-                        <a href="https://leozinho2831.github.io/Florest/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/Florest.jpg" alt="Florest">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>todoList</h2>
-                        <h3>
-                            Tecnologias:
-                            <span id="javascript">javascript</span>
-                            <span id="css3">css3</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <p>
-                            Projeto todoList, no qual o objetivo de desenvolver o conhecimento em javascript, utilizando métodos para organizar em datas e horas, storage para armazenar as tarefas...
-                        </p>
-                        <a href="https://leozinho2831.github.io/TodoList/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/TodoList.jpg" alt="TodoList">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>animais fantásticos</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span>
-                            <span id="css3">css3</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <p>
-                            Projeto do curso da Origamid. Um projeto que aborda o uso total de javascript para criar novas interações com o usuário, buscando soluções até mesmo quando ele não possui javascript ativado.
-                        </p>
-                        <a href="https://leozinho2831.github.io/Fantastic-Animals/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/Fantastic Animals.jpg" alt="Animais Fantásticos">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>divine sushi</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span> 
-                            <span id="css3">css3</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <p>
-                            Projeto com design do criador Jaydeep Kaila, feito em conjunto com o programador Luiz Antônio Martinez Filho. Um projeto voltado ao treino de css3, html5 e utilizando o básico do javascrip.
-                        </p>
-                        <a href="https://leozinho2831.github.io/Divine-Sushi/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/Divine Sushi.jpg" alt="Divine Sushi">
-                    </figure>
-                </div>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>apple clone</h2>
-                        <h3>
-                            Tecnologias: 
-                            <span id="javascript">javascript</span> 
-                            <span id="css3">css3</span>
-                            <span id="html5">html5</span>
-                        </h3>
-                        <p>
-                            Um clone da home da apple em 2022. Esse é um projeto no qual o objetivo era superar meus limites e entrar em um cenário de sites mais completos como de uma multinacional.
-                        </p>
-                        <a href="https://leozinho2831.github.io/AppleClone/" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/Apple Clone.jpg" alt="Apple Clone">
-                    </figure>
-                </div>
-            </section>
-
-            <section class="main__projects js-showSection">
-                <h1>design figma</h1>
-                <div class="flexDiv js-showSection">
-                    <div>
-                        <h2>portfólio</h2>
-                        <h3>
-                            Tecnologias:
-                            <span id="figma">figma</span>
-                        </h3>
-                        <p>
-                            Design deste portfólio, no qual utilizei uma escalade cores criada por mim e estilos de fonte para encaixar-se perfeitamente com cada objetivo necessário, e assim criar um site harmônico entre cada elemento.
-                        </p>
-                        <a href="https://www.figma.com/design/1b4GrKFwtXwOpR0qJHSuM6/Portf%C3%B3lio?m=auto&t=ICeFiGaIGFRKJrDY-6" target="_blank">
-                            Veja mais 
-                            <img src="Assets/Images/components/link.svg" alt="link">
-                        </a>
-                    </div>
-                    <figure>
-                        <img src="Assets/Images/images projects/portfólio figma.jpg" alt="Portifólio Design">
-                    </figure>
-                </div>
-            </section>
- 
-            <section class="main__laguage js-showSection">
-                <h1>línguas</h1>
-                <div>
-                    <figure>
-                        <img src="Assets/Images/components/estados-unidos.svg" alt="inglês">
-                        <p>en básico</p>
-                    </figure>
-                    <figure>
-                        <img src="Assets/Images/components/brasil.svg" alt="português">
-                        <p>pt-br falante nativo</p>
-                    </figure>
-                </div>
-            </section>
-
-        </main>
-    </div>
-    <div class="background">
-        <footer class="footer" id="contact">
-            <h1>contato</h1>
-            <picture>
-                <a href="https://github.com/Leonardo2831" target="_blank">
-                    <img src="Assets/Images/components/Github.png" alt="Github">
+                <a href="mailto:leoferraz1818@gmail.com">
+                    <img
+                        src="Assets/Images/components/e-mail.svg"
+                        alt="E-mail"
+                    />
+                    <p>leoferraz1818@gmail.com</p>
                 </a>
-                <a href="https://www.instagram.com/leonardo_reis_ferraz/?igshid=MGNiNDI5ZTU%3D" target="_blank">
-                    <img src="Assets/Images/components/Instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/in/leonardo-ferraz-688095271/" target="_blank">
-                    <img src="Assets/Images/components/LinkedIn.png" alt="LinkedIn">
-                </a>
-            </picture>
-            <a href="mailto:leoferraz1818@gmail.com">
-                <img src="Assets/Images/components/e-mail.svg" alt="E-mail">
-                <p>leoferraz1818@gmail.com</p>
-            </a>
-        </footer>
-    </div>
+            </footer>
+        </div>
 
-    <script src="Assets/Javascript/script.js"></script>
-</body>
+        <script src="Assets/Javascript/script.js"></script>
+    </body>
 </html>
