@@ -122,6 +122,7 @@
             background-color: $red-2;
             color: $red-5;
             border-radius: 5px;
+            transition: all 0.3s ease;
         
             @include fontText(20, 600);
             text-transform: uppercase;
@@ -133,9 +134,20 @@
             @include responsive(screen){
                 @include fontText(32, 600);
             }
+
+            &:hover {
+                background-color: $red-3;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                
+                img {
+                    transform: translateX(5px);
+                }
+            }
         
             img{
                 width: 30px;
+                transition: transform 0.3s ease;
         
                 @include responsive(tablet){
                     width: 35px;

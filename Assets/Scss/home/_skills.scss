@@ -7,79 +7,118 @@
 
 .skills__graphics{
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: $gap-1;
 
+    @include responsive(tablet){
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: $gap-2;
+    }
+
     > div{
-        margin: 0 0 0 20px;
-        @include flex(center, flex-start);
-        gap: $gap-1;
-        
-        div{
-            display: flex;
-            gap: 5px;
+        position: relative;
+        background-color: $grey-5;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px $shadow;
+        padding: 20px;
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 15px;
+        transition: box-shadow 0.3s ease;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 2px; // border width
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
-        figure{
-            width: 40px;
+        &:hover {
+            box-shadow: 0 10px 20px $shadow;
 
-            @include responsive(screen){
-                width: 45px;
+            &::before {
+                opacity: 1;
             }
         }
 
-        .graphics{
+        figure{
+            width: 50px;
+            height: 50px;
+            @include flex(center, center);
+
+            @include responsive(screen){
+                width: 60px;
+                height: 60px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .skill-info{
             width: 100%;
-            background-color: $grey-5;
-            border-radius: 20px;
-            box-shadow: 0 1px 2px $shadow;
+            @include flex(center, center);
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
 
-            div{
-                @include flex(center, flex-start);
-                gap: 5px;
-
-                padding: 5px 15px;
-                min-width: fit-content;
-                height: 25px;
+            h3 {
+                @include fontTitle(16, 600);
+                color: $grey-1;
+                margin: 0;
 
                 @include responsive(tablet){
-                    height: 30px;
+                    @include fontTitle(18, 600);
                 }
+            }
 
-                @include responsive(screen){
-                    height: 35px;
-                }
+            p, span{
+                @include fontTitle(12, 400);
+                color: $grey-3;
+                margin: 0;
 
-                p, span{
-                    white-space: nowrap;
+                @include responsive(tablet){
                     @include fontTitle(14, 400);
-                    color: $grey-7;
-
-                    @include responsive(tablet){
-                        @include fontTitle(20, 400);
-                    }
-
-                    @include responsive(screen){
-                        @include fontTitle(22, 400);
-                    }
                 }
             }
         }
     }
 
-    $gradient: (
-        1: $gradient-tailwind,
-        2: $gradient-sass,
-        3: $gradient-css,
-        4: $gradient-javascript,
-        5: $gradient-html,
-        6: $gradient-figma,
+    $colors: (
+        1: $tailwind,
+        2: $sass,
+        3: $css3,
+        4: $javascript,
+        5: $html5,
+        6: $figma,
+        7: $java,
+        8: $nodejs,
+        9: $sqlite,
+        10: $typescript,
     );
 
-    // index assume os valores que guardam as variáveis no objeto, já o values pega o valor do objeto, sendo ele o próprio gradient
-    @each $index, $values in $gradient {
-        div:nth-of-type(#{$index}) .graphics div{
-            background-image: $values;
-            border-radius: 20px;
+    @each $index, $color in $colors {
+        > div:nth-of-type(#{$index}) {
+            &::before {
+                background: linear-gradient(135deg, rgba($color, 0.8), rgba($color, 0.1));
+            }
+            &:hover {
+                box-shadow: 0 10px 20px rgba($color, 0.2);
+            }
         }
     }
 }
